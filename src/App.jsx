@@ -37,9 +37,6 @@ export default function App() {
           <SubNavbar lang={lang} setView={setView} />
           <Hero lang={lang} setView={setView} />
           <StatsBar lang={lang} />
-          <div className="section" style={{ padding: '0 2rem' }}>
-            <AdBanner slot="horizontal" />
-          </div>
           <Institutions lang={lang} setView={setView} />
           <Expertise lang={lang} setView={setView} />
           <Experience lang={lang} />
