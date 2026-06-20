@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyGateItaly — Your Gateway to Studying in Italy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --g:#009246;--g2:#006830;--r:#CE2B37;--w:#fff;
+  --bg:#f7f8f5;--dark:#0f1a12;--text:#1c2b1e;--muted:#5a6e5c;
+  --card:#ffffff;--border:#e2e8e3;
+  --shadow:0 2px 16px rgba(0,80,30,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+
+/* LANG SWITCHER */
+.lang-btn{display:none}
+[lang="ar"] .ar{display:block!important}
+[lang="ar"] .en{display:none!important}
+[lang="en"] .ar{display:none!important}
+[lang="en"] .en{display:block!important}
+.ar{display:none}
+
+/* NAV */
+nav{
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 2rem;height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+}
+.logo{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo em{color:var(--g);font-style:normal}
+.nav-right{display:flex;align-items:center;gap:1.5rem}
+.nav-links{display:flex;gap:1.2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:0.875rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--g)}
+.lang-toggle{
+  background:var(--dark);color:white;
+  border:none;padding:6px 14px;border-radius:20px;
+  font-size:0.8rem;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.cta-nav{
+  background:var(--g);color:white;
+  padding:8px 18px;border-radius:8px;
+  text-decoration:none;font-size:0.875rem;font-weight:600;
+  transition:background 0.2s;
+}
+.cta-nav:hover{background:var(--g2)}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:3rem;
+  padding:4rem 4rem;
+  max-width:1200px;margin:0 auto;
+}
+.hero-text h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2.5rem,5vw,4rem);
+  line-height:1.1;
+  color:var(--dark);
+  margin-bottom:1.5rem;
+}
+.hero-text h1 span{color:var(--g)}
+.hero-text p{font-size:1.1rem;color:var(--muted);margin-bottom:2rem;max-width:480px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{
+  background:var(--g);color:white;
+  padding:14px 28px;border-radius:10px;
+  text-decoration:none;font-weight:600;font-size:1rem;
+  transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary:hover{background:var(--g2);transform:translateY(-1px)}
+.btn-secondary{
+  background:transparent;color:var(--dark);
+  padding:14px 28px;border-radius:10px;
+  text-decoration:none;font-weight:600;font-size:1rem;
+  border:2px solid var(--border);transition:all 0.2s;
+}
+.btn-secondary:hover{border-color:var(--g);color:var(--g)}
+.hero-image{position:relative}
+.hero-image img{
+  width:100%;border-radius:24px;
+  object-fit:cover;height:500px;
+  box-shadow:0 24px 64px rgba(0,80,30,0.15);
+}
+.hero-badge{
+  position:absolute;bottom:-20px;left:-20px;
+  background:white;border-radius:16px;
+  padding:16px 20px;box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+.hero-badge .number{font-family:'Fraunces',serif;font-size:1.8rem;color:var(--g);font-weight:900}
+.hero-badge .label{font-size:0.75rem;color:var(--muted);margin-top:2px}
+
+/* STATS BAR */
+.stats-bar{
+  background:var(--dark);
+  padding:2rem 4rem;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2rem;text-align:center;
+}
+.stat .n{font-family:'Fraunces',serif;font-size:2rem;color:white;font-weight:900}
+.stat .l{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:4px}
+
+/* SECTIONS */
+.section{padding:5rem 4rem;max-width:1200px;margin:0 auto}
+.section-full{padding:5rem 4rem;background:white}
+.section-full-inner{max-width:1200px;margin:0 auto}
+.eyebrow{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--g);margin-bottom:0.75rem}
+.section-title{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-bottom:0.75rem;line-height:1.2}
+.section-sub{color:var(--muted);font-size:1rem;margin-bottom:3rem;max-width:600px}
+
+/* GUIDES GRID */
+.guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.guide-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;padding:1.8rem;
+  transition:all 0.2s;cursor:pointer;text-decoration:none;color:inherit;display:block;
+}
+.guide-card:hover{border-color:var(--g);box-shadow:var(--shadow);transform:translateY(-2px)}
+.guide-icon{font-size:2rem;margin-bottom:1rem}
+.guide-card h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem;color:var(--dark)}
+.guide-card p{font-size:0.875rem;color:var(--muted);line-height:1.6}
+.guide-tag{
+  display:inline-block;margin-top:1rem;
+  font-size:0.75rem;font-weight:600;
+  color:var(--g);background:#f0fff4;
+  padding:4px 10px;border-radius:20px;
+}
+
+/* STEPS */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;position:relative}
+.step-card{
+  background:var(--bg);border-radius:16px;
+  padding:1.5rem;text-align:center;
+  border:1px solid var(--border);
+}
+.step-num{
+  width:44px;height:44px;background:var(--g);color:white;
+  border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:1rem;margin:0 auto 1rem;
+  font-family:'Fraunces',serif;
+}
+.step-card h3{font-size:0.9rem;font-weight:600;margin-bottom:0.4rem;color:var(--dark)}
+.step-card p{font-size:0.8rem;color:var(--muted);line-height:1.5}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.service-card{
+  border-radius:16px;padding:2rem;
+  border:2px solid var(--border);
+  transition:all 0.2s;position:relative;overflow:hidden;
+}
+.service-card.featured{border-color:var(--g);background:#f0fff4}
+.service-badge{
+  position:absolute;top:16px;right:16px;
+  background:var(--g);color:white;
+  font-size:0.7rem;font-weight:700;
+  padding:4px 10px;border-radius:20px;
+}
+.service-price{
+  font-family:'Fraunces',serif;font-size:2.5rem;
+  font-weight:900;color:var(--dark);
+}
+.service-price span{font-size:1rem;font-weight:400;color:var(--muted)}
+.service-card h3{font-size:1.1rem;font-weight:600;margin:0.5rem 0;color:var(--dark)}
+.service-card p{font-size:0.875rem;color:var(--muted);margin-bottom:1rem;line-height:1.6}
+.service-features{list-style:none;margin-bottom:1.5rem}
+.service-features li{font-size:0.85rem;color:var(--muted);padding:4px 0;display:flex;align-items:center;gap:8px}
+.service-features li::before{content:"✓";color:var(--g);font-weight:700;flex-shrink:0}
+.service-btn{
+  display:block;text-align:center;
+  background:var(--dark);color:white;
+  padding:12px;border-radius:10px;
+  text-decoration:none;font-weight:600;font-size:0.9rem;
+  transition:background 0.2s;
+}
+.service-btn:hover{background:var(--g)}
+.service-card.featured .service-btn{background:var(--g)}
+.service-card.featured .service-btn:hover{background:var(--g2)}
+
+/* DISCOUNT SECTION */
+.discount-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.discount-card{
+  background:var(--dark);color:white;
+  border-radius:16px;padding:1.5rem;text-align:center;
+}
+.discount-pct{font-family:'Fraunces',serif;font-size:3rem;font-weight:900;color:var(--g)}
+.discount-card h4{font-size:0.9rem;font-weight:600;margin:0.5rem 0;color:white}
+.discount-card p{font-size:0.8rem;color:rgba(255,255,255,0.5)}
+.promo-codes{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.promo-code{
+  background:white;border:2px dashed var(--g);
+  border-radius:12px;padding:1rem 1.5rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.code{font-family:monospace;font-size:1.1rem;font-weight:700;color:var(--g)}
+.code-desc{font-size:0.85rem;color:var(--muted)}
+
+/* CITIES */
+.cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem}
+.city-card{
+  border-radius:16px;overflow:hidden;
+  border:1px solid var(--border);
+  transition:all 0.2s;cursor:pointer;text-decoration:none;color:inherit;
+}
+.city-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.city-img{height:120px;background:linear-gradient(135deg,var(--g),var(--g2));display:flex;align-items:center;justify-content:center;font-size:3rem}
+.city-info{padding:1rem}
+.city-info h4{font-weight:600;font-size:0.9rem;color:var(--dark)}
+.city-info p{font-size:0.75rem;color:var(--muted);margin-top:2px}
+
+/* PAYMENT */
+.payment-section{background:var(--dark);padding:5rem 4rem;color:white}
+.payment-inner{max-width:1200px;margin:0 auto}
+.payment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+.payment-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:16px;padding:1.8rem;
+}
+.payment-card h3{font-size:1rem;font-weight:600;color:white;margin-bottom:0.5rem}
+.payment-card p{font-size:0.875rem;color:rgba(255,255,255,0.5);margin-bottom:1rem}
+.payment-detail{font-family:monospace;font-size:0.85rem;background:rgba(255,255,255,0.08);padding:10px 14px;border-radius:8px;color:rgba(255,255,255,0.8);word-break:break-all}
+.qr-box{text-align:center;margin-top:1rem}
+.qr-box img{width:140px;border-radius:12px;background:white;padding:8px}
+
+/* CONSULTANT */
+.consultant-section{
+  background:linear-gradient(135deg,var(--g),var(--g2));
+  padding:5rem 4rem;color:white;
+}
+.consultant-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
+.consultant-photo img{
+  width:200px;height:200px;
+  border-radius:50%;object-fit:cover;object-position:top;
+  border:4px solid rgba(255,255,255,0.3);
+}
+.consultant-info h2{font-family:'Fraunces',serif;font-size:2rem;margin-bottom:0.5rem}
+.consultant-info .title{opacity:0.8;margin-bottom:1.5rem}
+.consultant-info p{opacity:0.9;margin-bottom:2rem;max-width:500px;line-height:1.7}
+.consult-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-white{
+  background:white;color:var(--g);
+  padding:12px 24px;border-radius:10px;
+  text-decoration:none;font-weight:700;font-size:0.9rem;
+  transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-white:hover{background:var(--bg)}
+.btn-outline-white{
+  background:transparent;color:white;
+  padding:12px 24px;border-radius:10px;
+  text-decoration:none;font-weight:600;font-size:0.9rem;
+  border:2px solid rgba(255,255,255,0.4);
+  transition:all 0.2s;
+}
+.btn-outline-white:hover{border-color:white}
+
+/* RESOURCES */
+.resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.resource-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:1.2rem;
+  display:flex;align-items:center;gap:1rem;
+  text-decoration:none;color:inherit;
+  transition:all 0.2s;
+}
+.resource-card:hover{border-color:var(--g);box-shadow:var(--shadow)}
+.resource-icon{font-size:1.5rem;flex-shrink:0}
+.resource-card h4{font-size:0.875rem;font-weight:600;color:var(--dark)}
+.resource-card p{font-size:0.75rem;color:var(--muted)}
+.resource-arrow{margin-left:auto;color:var(--g);font-size:1.2rem;flex-shrink:0}
+
+/* FOOTER */
+footer{background:#0a0f0b;padding:3rem 4rem;color:rgba(255,255,255,0.4);text-align:center}
+footer .footer-logo{font-family:'Fraunces',serif;font-size:1.5rem;color:white;margin-bottom:1rem}
+footer p{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.6);text-decoration:none}
+footer a:hover{color:white}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:0 1rem}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding:2rem 1.5rem;min-height:auto}
+  .hero-image{order:-1}
+  .hero-image img{height:280px}
+  .hero-badge{bottom:-10px;left:10px}
+  .stats-bar{grid-template-columns:repeat(2,1fr);padding:2rem 1.5rem}
+  .section,.section-full{padding:3rem 1.5rem}
+  .consultant-inner{grid-template-columns:1fr;text-align:center}
+  .consultant-photo img{width:140px;height:140px}
+  .consult-btns{justify-content:center}
+  .payment-section{padding:3rem 1.5rem}
+  .consultant-section{padding:3rem 1.5rem}
+}
+</style>
+</head>
+<body id="page" lang="en">
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">Study<em>Gate</em>Italy 🇮🇹</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#guides"><span class="en">Guides</span><span class="ar">الأدلة</span></a></li>
+      <li><a href="#steps"><span class="en">How to Apply</span><span class="ar">كيفاش تسجل</span></a></li>
+      <li><a href="#services"><span class="en">Services</span><span class="ar">الخدمات</span></a></li>
+      <li><a href="#cities"><span class="en">Cities</span><span class="ar">المدن</span></a></li>
+      <li><a href="#resources"><span class="en">Resources</span><span class="ar">الروابط</span></a></li>
+    </ul>
+    <button class="lang-toggle" onclick="toggleLang()">عربي / EN</button>
+    <a href="#consult" class="cta-nav"><span class="en">Book Consultation</span><span class="ar">احجز استشارة</span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <p class="eyebrow en">For students from Algeria, Morocco, Tunisia & beyond</p>
+    <p class="eyebrow ar">للطلاب من الجزائر، المغرب، تونس وأكثر</p>
+    <h1 class="en">Your Gateway to <span>Studying in Italy</span> 🇮🇹</h1>
+    <h1 class="ar">بوابتك للدراسة <span>في إيطاليا</span> 🇮🇹</h1>
+    <p class="en">Everything you need — from Universitaly application to your first day in Italy. Real guides, real links, real help.</p>
+    <p class="ar">كل شي تحتاجه — من التسجيل في Universitaly لأول يوم في إيطاليا. أدلة حقيقية، روابط حقيقية، مساعدة حقيقية.</p>
+    <div class="hero-btns">
+      <a href="#steps" class="btn-primary"><span class="en">Start Your Journey →</span><span class="ar">ابدا رحلتك ←</span></a>
+      <a href="#services" class="btn-secondary"><span class="en">Our Services</span><span class="ar">خدماتنا</span></a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80" alt="Italy Study">
+    <div class="hero-badge">
+      <div class="number">90+</div>
+      <div class="label en">Italian Universities</div>
+      <div class="label ar">جامعة إيطالية</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat"><div class="n">50K+</div><div class="l en">International Students</div><div class="l ar">طالب دولي</div></div>
+  <div class="stat"><div class="n">€0</div><div class="l en">Public Tuition</div><div class="l ar">تعليم مجاني</div></div>
+  <div class="stat"><div class="n">5K€+</div><div class="l en">DSU Scholarship/year</div><div class="l ar">منحة DSU/سنة</div></div>
+  <div class="stat"><div class="n">800+</div><div class="l en">Years of Academia</div><div class="l ar">سنة أكاديمية</div></div>
+</div>
+
+<!-- GUIDES -->
+<div class="section" id="guides">
+  <p class="eyebrow en">Complete Guides</p>
+  <p class="eyebrow ar">أدلة كاملة</p>
+  <h2 class="section-title en">Everything You Need to Know</h2>
+  <h2 class="section-title ar">كل شي تحتاج تعرفه</h2>
+  <p class="section-sub en">Step-by-step guides for every part of your Italian study journey</p>
+  <p class="section-sub ar">أدلة خطوة بخطوة لكل مرحلة في رحلتك الدراسية في إيطاليا</p>
+  <div class="guides-grid">
+    <a href="https://www.universitaly.it" target="_blank" class="guide-card">
+      <div class="guide-icon">🎓</div>
+      <h3 class="en">Universitaly Registration</h3>
+      <h3 class="ar">التسجيل في Universitaly</h3>
+      <p class="en">Complete step-by-step guide — account creation, document upload, validation tracking and what to do if blocked.</p>
+      <p class="ar">دليل كامل — إنشاء الحساب، رفع الوثائق، متابعة التحقق وماذا تفعل إذا تم حظر ملفك.</p>
+      <span class="guide-tag en">Essential First Step</span>
+      <span class="guide-tag ar">أول خطوة أساسية</span>
+    </a>
+    <a href="#" class="guide-card">
+      <div class="guide-icon">🛂</div>
+      <h3 class="en">Student Visa Type D — Full Dossier</h3>
+      <h3 class="ar">فيزا الطالب النوع D — الدوسيي الكامل</h3>
+      <p class="en">Exact list of required documents, embassy links for Algeria/Morocco/Tunisia/Uzbekistan, certified translator contacts.</p>
+      <p class="ar">القائمة الدقيقة للوثائق المطلوبة، روابط السفارات للجزائر/المغرب/تونس/أوزبكستان، جهات المترجمين المعتمدين.</p>
+      <span class="guide-tag en">Critical Document</span>
+      <span class="guide-tag ar">وثيقة أساسية</span>
+    </a>
+    <a href="#" class="guide-card">
+      <div class="guide-icon">🏠</div>
+      <h3 class="en">Finding Housing in Italy</h3>
+      <h3 class="ar">إيجاد السكن في إيطاليا</h3>
+      <p class="en">Best websites: Idealista, Immobiliare, Uniplaces. Ready-to-send message templates in Italian. How to avoid scams.</p>
+      <p class="ar">أفضل المواقع: Idealista، Immobiliare، Uniplaces. قوالب رسائل جاهزة بالإيطالية. كيفاش تتجنب النصب.</p>
+      <span class="guide-tag en">Save Money</span>
+      <span class="guide-tag ar">وفر المال</span>
+    </a>
+    <a href="#" class="guide-card">
+      <div class="guide-icon">💰</div>
+      <h3 class="en">DSU / ISEE Scholarship</h3>
+      <h3 class="ar">منحة DSU / ISEE</h3>
+      <p class="en">Free housing + meals + up to 5,000€/year cash. How to apply, deadlines per city, ISEE calculation for foreign students.</p>
+      <p class="ar">سكن مجاني + وجبات + حتى 5,000€/سنة كاش. كيفاش تقدم، المواعيد لكل مدينة، حساب ISEE للطلاب الأجانب.</p>
+      <span class="guide-tag en">Free Money!</span>
+      <span class="guide-tag ar">مال مجاني!</span>
+    </a>
+    <a href="#" class="guide-card">
+      <div class="guide-icon">📄</div>
+      <h3 class="en">First 30 Days in Italy</h3>
+      <h3 class="ar">أول 30 يوم في إيطاليا</h3>
+      <p class="en">Codice Fiscale → Permesso di Soggiorno (within 8 days!) → Tessera Sanitaria → Bank account. Day-by-day checklist.</p>
+      <p class="ar">Codice Fiscale ← Permesso di Soggiorno (خلال 8 أيام!) ← Tessera Sanitaria ← الحساب البنكي. قائمة تحقق يوم بيوم.</p>
+      <span class="guide-tag en">Urgent — Do First</span>
+      <span class="guide-tag ar">عاجل — افعل أولاً</span>
+    </a>
+    <a href="#" class="guide-card">
+      <div class="guide-icon">💼</div>
+      <h3 class="en">Working While Studying</h3>
+      <h3 class="ar">العمل أثناء الدراسة</h3>
+      <p class="en">You can work 20 hours/week as a foreign student. Best job platforms: Indeed.it, InfoJobs, LinkedIn. Italian CV template included.</p>
+      <p class="ar">تقدر تشتغل 20 ساعة/أسبوع كطالب أجنبي. أفضل منصات العمل: Indeed.it، InfoJobs، LinkedIn. قالب CV إيطالي متضمن.</p>
+      <span class="guide-tag en">Earn Extra Income</span>
+      <span class="guide-tag ar">اكسب دخلاً إضافياً</span>
+    </a>
+  </div>
+</div>
+
+<!-- STEPS -->
+<div class="section-full" id="steps">
+  <div class="section-full-inner">
+    <p class="eyebrow en">The Process</p>
+    <p class="eyebrow ar">الخطوات</p>
+    <h2 class="section-title en">From Your Country to Italy — Step by Step</h2>
+    <h2 class="section-title ar">من بلدك لإيطاليا — خطوة بخطوة</h2>
+    <p class="section-sub en">The complete application process for international students</p>
+    <p class="section-sub ar">العملية الكاملة للتقديم للطلاب الدوليين</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3 class="en">Choose Your University</h3>
+        <h3 class="ar">اختر جامعتك</h3>
+        <p class="en">Research programs and pick your university on universitaly.it</p>
+        <p class="ar">ابحث عن البرامج واختر جامعتك على universitaly.it</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3 class="en">Register on Universitaly</h3>
+        <h3 class="ar">سجل في Universitaly</h3>
+        <p class="en">Create your account and start your pre-enrollment application</p>
+        <p class="ar">أنشئ حسابك وابدأ طلب التسجيل المسبق</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3 class="en">Upload Documents</h3>
+        <h3 class="ar">ارفع الوثائق</h3>
+        <p class="en">Diploma + transcripts (translated) + passport + language certificate</p>
+        <p class="ar">الشهادة + كشف النقاط (مترجم) + جواز السفر + شهادة اللغة</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3 class="en">Get Your LOA</h3>
+        <h3 class="ar">احصل على خطاب القبول</h3>
+        <p class="en">Receive your Letter of Acceptance from the university</p>
+        <p class="ar">استلم خطاب القبول من الجامعة</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <h3 class="en">Apply for Visa</h3>
+        <h3 class="ar">قدم للفيزا</h3>
+        <p class="en">Book embassy appointment and apply for Type D student visa</p>
+        <p class="ar">احجز موعداً في السفارة وقدم لفيزا الطالب النوع D</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">6</div>
+        <h3 class="en">Arrive & Enroll</h3>
+        <h3 class="ar">وصول وتسجيل</h3>
+        <p class="en">Complete enrollment and start your Italian adventure!</p>
+        <p class="ar">أكمل التسجيل وابدأ مغامرتك الإيطالية!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+  <p class="eyebrow en">Our Services</p>
+  <p class="eyebrow ar">خدماتنا</p>
+  <h2 class="section-title en">We Guide You Every Step of the Way</h2>
+  <h2 class="section-title ar">نرافقك في كل خطوة</h2>
+  <p class="section-sub en">Personal guidance from an Algerian student already in Italy</p>
+  <p class="section-sub ar">إرشاد شخصي من طالب جزائري موجود في إيطاليا</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-price">$10 <span>/ session</span></div>
+      <h3 class="en">Quick Consultation</h3>
+      <h3 class="ar">استشارة سريعة</h3>
+      <p class="en">Answer to one specific question about your application, visa or life in Italy. Reply within 24h.</p>
+      <p class="ar">إجابة على سؤال واحد محدد حول ملفك، الفيزا أو الحياة في إيطاليا. رد خلال 24 ساعة.</p>
+      <ul class="service-features">
+        <li class="en">1 specific question answered</li>
+        <li class="en">WhatsApp or email reply</li>
+        <li class="en">Within 24 hours</li>
+        <li class="ar">إجابة على سؤال واحد</li>
+        <li class="ar">رد عبر WhatsApp أو إيميل</li>
+        <li class="ar">خلال 24 ساعة</li>
+      </ul>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn en">Book via WhatsApp →</a>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn ar">احجز عبر واتساب ←</a>
+    </div>
+    <div class="service-card">
+      <div class="service-price">$15 <span>/ document</span></div>
+      <h3 class="en">CV & Motivation Letter</h3>
+      <h3 class="ar">CV وخطاب تحفيز</h3>
+      <p class="en">Professional Italian CV and motivation letter for your university application. In Italian, English or French.</p>
+      <p class="ar">CV إيطالي احترافي وخطاب تحفيز لطلب الجامعة. بالإيطالية أو الإنجليزية أو الفرنسية.</p>
+      <ul class="service-features">
+        <li class="en">Professional Italian CV</li>
+        <li class="en">Motivation letter included</li>
+        <li class="en">3 languages available</li>
+        <li class="ar">CV إيطالي احترافي</li>
+        <li class="ar">خطاب التحفيز متضمن</li>
+        <li class="ar">3 لغات متاحة</li>
+      </ul>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn en">Book via WhatsApp →</a>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn ar">احجز عبر واتساب ←</a>
+    </div>
+    <div class="service-card featured">
+      <div class="service-badge en">Most Popular</div>
+      <div class="service-badge ar">الأكثر طلباً</div>
+      <div class="service-price">$30 <span>/ review</span></div>
+      <h3 class="en">Full Application Review</h3>
+      <h3 class="ar">مراجعة الملف الكامل</h3>
+      <p class="en">We review your entire Universitaly file, find problems and tell you exactly what to fix. Reply within 48h.</p>
+      <p class="ar">نراجع ملفك كامل في Universitaly، نلقى المشاكل ونقولك بالضبط شنو تبدل. رد خلال 48 ساعة.</p>
+      <ul class="service-features">
+        <li class="en">Full Universitaly file review</li>
+        <li class="en">Document checklist</li>
+        <li class="en">Written report of issues</li>
+        <li class="en">Fix recommendations</li>
+        <li class="ar">مراجعة ملف Universitaly كامل</li>
+        <li class="ar">قائمة تحقق الوثائق</li>
+        <li class="ar">تقرير مكتوب عن المشاكل</li>
+        <li class="ar">توصيات للإصلاح</li>
+      </ul>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn en">Book via WhatsApp →</a>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn ar">احجز عبر واتساب ←</a>
+    </div>
+    <div class="service-card">
+      <div class="service-price">$50 <span>/ package</span></div>
+      <h3 class="en">Complete Guidance Package</h3>
+      <h3 class="ar">باقة الإرشاد الكاملة</h3>
+      <p class="en">Full support from Universitaly to visa. We write your letters in Italian, track your file, guide every step.</p>
+      <p class="ar">دعم كامل من Universitaly للفيزا. نكتب رسائلك بالإيطالية، نتابع ملفك، نرشدك في كل خطوة.</p>
+      <ul class="service-features">
+        <li class="en">Everything in Review package</li>
+        <li class="en">Italian letters written for you</li>
+        <li class="en">Visa dossier preparation</li>
+        <li class="en">DSU application assistance</li>
+        <li class="ar">كل شي في باقة المراجعة</li>
+        <li class="ar">رسائل إيطالية مكتوبة لك</li>
+        <li class="ar">تحضير دوسيي الفيزا</li>
+        <li class="ar">مساعدة في طلب DSU</li>
+      </ul>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn en">Book via WhatsApp →</a>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn ar">احجز عبر واتساب ←</a>
+    </div>
+    <div class="service-card">
+      <div class="service-price">$80 <span>/ full</span></div>
+      <h3 class="en">VIP All-Inclusive</h3>
+      <h3 class="ar">VIP شامل</h3>
+      <p class="en">From application to your first week in Italy. Housing help, Codice Fiscale, Permesso di Soggiorno — we handle it all.</p>
+      <p class="ar">من الطلب لأول أسبوع في إيطاليا. مساعدة السكن، Codice Fiscale، Permesso — نتكفل بكل شي.</p>
+      <ul class="service-features">
+        <li class="en">Everything in Complete package</li>
+        <li class="en">Housing search assistance</li>
+        <li class="en">First week in Italy support</li>
+        <li class="en">Priority replies (under 2h)</li>
+        <li class="ar">كل شي في الباقة الكاملة</li>
+        <li class="ar">مساعدة في البحث عن سكن</li>
+        <li class="ar">دعم أول أسبوع في إيطاليا</li>
+        <li class="ar">ردود ذات أولوية (أقل من ساعتين)</li>
+      </ul>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn en">Book via WhatsApp →</a>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn ar">احجز عبر واتساب ←</a>
+    </div>
+    <div class="service-card">
+      <div class="service-price">$20 <span>/ guide</span></div>
+      <h3 class="en">PDF Mega Guide</h3>
+      <h3 class="ar">دليل PDF الشامل</h3>
+      <p class="en">50+ page complete guide covering everything from A to Z. Download once, keep forever. Arabic + French + English.</p>
+      <p class="ar">دليل شامل 50+ صفحة يغطي كل شي من الألف للياء. حمله مرة واحتفظ به للأبد. عربي + فرنسي + إنجليزي.</p>
+      <ul class="service-features">
+        <li class="en">50+ pages of content</li>
+        <li class="en">All 3 languages</li>
+        <li class="en">Instant download</li>
+        <li class="ar">50+ صفحة من المحتوى</li>
+        <li class="ar">3 لغات كاملة</li>
+        <li class="ar">تحميل فوري</li>
+      </ul>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn en">Get PDF Guide →</a>
+      <a href="https://wa.me/213658950047" target="_blank" class="service-btn ar">احصل على الدليل ←</a>
+    </div>
+  </div>
+</div>
+
+<!-- DISCOUNTS -->
+<div class="section-full">
+  <div class="section-full-inner">
+    <p class="eyebrow en">Special Offers</p>
+    <p class="eyebrow ar">عروض خاصة</p>
+    <h2 class="section-title en">Discounts & Promo Codes</h2>
+    <h2 class="section-title ar">خصومات وأكواد ترويجية</h2>
+    <p class="section-sub en">Special prices for students from North Africa and beyond</p>
+    <p class="section-sub ar">أسعار خاصة للطلاب من شمال أفريقيا وما بعدها</p>
+    <div class="discount-grid">
+      <div class="discount-card">
+        <div class="discount-pct">50%</div>
+        <h4 class="en">First Student</h4>
+        <h4 class="ar">أول طالب</h4>
+        <p class="en">First registration gets 50% off any service</p>
+        <p class="ar">أول تسجيل يحصل على 50% خصم على أي خدمة</p>
+      </div>
+      <div class="discount-card">
+        <div class="discount-pct">20%</div>
+        <h4 class="en">Refer a Friend</h4>
+        <h4 class="ar">دعوة صديق</h4>
+        <p class="en">Both of you get 20% off when you refer a friend</p>
+        <p class="ar">أنت وصديقك تحصلوا على 20% خصم</p>
+      </div>
+      <div class="discount-card">
+        <div class="discount-pct">30%</div>
+        <h4 class="en">Early Bird</h4>
+        <h4 class="ar">الحجز المبكر</h4>
+        <p class="en">First 50 students get 30% off all services</p>
+        <p class="ar">أول 50 طالب يحصلوا على 30% خصم</p>
+      </div>
+      <div class="discount-card">
+        <div class="discount-pct">25%</div>
+        <h4 class="en">Full Package Deal</h4>
+        <h4 class="ar">باقة كاملة</h4>
+        <p class="en">Book any 2+ services together and save 25%</p>
+        <p class="ar">احجز خدمتين أو أكثر معاً ووفر 25%</p>
+      </div>
+    </div>
+    <div class="promo-codes">
+      <div class="promo-code">
+        <div><div class="code">STUDY10</div><div class="code-desc en">10% off any service</div><div class="code-desc ar">10% خصم على أي خدمة</div></div>
+      </div>
+      <div class="promo-code">
+        <div><div class="code">ITALY2026</div><div class="code-desc en">15% off — limited time</div><div class="code-desc ar">15% خصم — وقت محدود</div></div>
+      </div>
+      <div class="promo-code">
+        <div><div class="code">VIP20</div><div class="code-desc en">20% off for WhatsApp group members</div><div class="code-desc ar">20% خصم لأعضاء مجموعة WhatsApp</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CITIES -->
+<div class="section" id="cities">
+  <p class="eyebrow en">Where to Study</p>
+  <p class="eyebrow ar">أين تدرس</p>
+  <h2 class="section-title en">Top Student Cities in Italy</h2>
+  <h2 class="section-title ar">أفضل مدن الطلاب في إيطاليا</h2>
+  <p class="section-sub en">Choose your city based on lifestyle, cost, and university options</p>
+  <p class="section-sub ar">اختر مدينتك حسب نمط الحياة، التكلفة وخيارات الجامعات</p>
+  <div class="cities-grid">
+    <a href="#" class="city-card"><div class="city-img">🏛️</div><div class="city-info"><h4>Rome</h4><p class="en">History & culture capital</p><p class="ar">عاصمة التاريخ والثقافة</p></div></a>
+    <a href="#" class="city-card"><div class="city-img">🎨</div><div class="city-info"><h4>Milan</h4><p class="en">Design & business hub</p><p class="ar">مركز التصميم والأعمال</p></div></a>
+    <a href="#" class="city-card"><div class="city-img">📚</div><div class="city-info"><h4>Bologna</h4><p class="en">World's oldest university</p><p class="ar">أقدم جامعة في العالم</p></div></a>
+    <a href="#" class="city-card"><div class="city-img">🌊</div><div class="city-info"><h4>Palermo</h4><p class="en">Affordable & vibrant</p><p class="ar">اقتصادية وحيوية</p></div></a>
+    <a href="#" class="city-card"><div class="city-img">🌹</div><div class="city-info"><h4>Florence</h4><p class="en">Art & Renaissance city</p><p class="ar">مدينة الفن والنهضة</p></div></a>
+    <a href="#" class="city-card"><div class="city-img">⚓</div><div class="city-info"><h4>Naples</h4><p class="en">Lively southern Italy</p><p class="ar">جنوب إيطاليا النابض</p></div></a>
+  </div>
+</div>
+
+<!-- RESOURCES -->
+<div class="section-full" id="resources">
+  <div class="section-full-inner">
+    <p class="eyebrow en">Useful Links</p>
+    <p class="eyebrow ar">روابط مفيدة</p>
+    <h2 class="section-title en">Official Resources & Websites</h2>
+    <h2 class="section-title ar">الموارد والمواقع الرسمية</h2>
+    <p class="section-sub en">All the official links you need in one place</p>
+    <p class="section-sub ar">كل الروابط الرسمية التي تحتاجها في مكان واحد</p>
+    <div class="resources-grid">
+      <a href="https://www.universitaly.it" target="_blank" class="resource-card"><div class="resource-icon">🎓</div><div><h4>Universitaly</h4><p class="en">Official pre-enrollment portal</p><p class="ar">بوابة التسجيل المسبق الرسمية</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://ambalgeri.esteri.it" target="_blank" class="resource-card"><div class="resource-icon">🇮🇹</div><div><h4 class="en">Italian Embassy Algeria</h4><h4 class="ar">السفارة الإيطالية — الجزائر</h4><p class="en">Visa appointments and info</p><p class="ar">مواعيد ومعلومات الفيزا</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://ambrabat.esteri.it" target="_blank" class="resource-card"><div class="resource-icon">🇮🇹</div><div><h4 class="en">Italian Embassy Morocco</h4><h4 class="ar">السفارة الإيطالية — المغرب</h4><p class="en">Visa appointments and info</p><p class="ar">مواعيد ومعلومات الفيزا</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://ambtunis.esteri.it" target="_blank" class="resource-card"><div class="resource-icon">🇮🇹</div><div><h4 class="en">Italian Embassy Tunisia</h4><h4 class="ar">السفارة الإيطالية — تونس</h4><p class="en">Visa appointments and info</p><p class="ar">مواعيد ومعلومات الفيزا</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://www.agenziaentrate.gov.it" target="_blank" class="resource-card"><div class="resource-icon">📋</div><div><h4>Codice Fiscale</h4><p class="en">Get your Italian tax code</p><p class="ar">احصل على رقمك الضريبي الإيطالي</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://www.idealista.it" target="_blank" class="resource-card"><div class="resource-icon">🏠</div><div><h4>Idealista</h4><p class="en">Best website for housing</p><p class="ar">أفضل موقع للسكن</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://www.er-go.it" target="_blank" class="resource-card"><div class="resource-icon">💰</div><div><h4>DSU Bologna</h4><p class="en">Scholarship application</p><p class="ar">طلب المنحة — بولونيا</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://www.ersu.pa.it" target="_blank" class="resource-card"><div class="resource-icon">💰</div><div><h4>ERSU Palermo</h4><p class="en">Scholarship application</p><p class="ar">طلب المنحة — باليرمو</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://www.laziodisco.it" target="_blank" class="resource-card"><div class="resource-icon">💰</div><div><h4>LazioDisco Rome</h4><p class="en">Scholarship application</p><p class="ar">طلب المنحة — روما</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://it.indeed.com" target="_blank" class="resource-card"><div class="resource-icon">💼</div><div><h4>Indeed Italy</h4><p class="en">Find student jobs</p><p class="ar">ابحث عن وظائف الطلاب</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://www.uniplaces.com" target="_blank" class="resource-card"><div class="resource-icon">🏡</div><div><h4>Uniplaces</h4><p class="en">Student housing platform</p><p class="ar">منصة سكن الطلاب</p></div><div class="resource-arrow">→</div></a>
+      <a href="https://www.immobiliare.it" target="_blank" class="resource-card"><div class="resource-icon">🏢</div><div><h4>Immobiliare</h4><p class="en">Italy's #1 real estate site</p><p class="ar">أكبر موقع عقارات في إيطاليا</p></div><div class="resource-arrow">→</div></a>
+    </div>
+  </div>
+</div>
+
+<!-- PAYMENT -->
+<div class="payment-section">
+  <div class="payment-inner">
+    <p class="eyebrow" style="color:var(--g)">Payment Methods / طرق الدفع</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:2rem;color:white;margin-bottom:0.5rem" class="en">How to Pay for Your Service</h2>
+    <h2 style="font-family:'Fraunces',serif;font-size:2rem;color:white;margin-bottom:0.5rem" class="ar">كيفاش تدفع للخدمة</h2>
+    <p style="color:rgba(255,255,255,0.5)" class="en">After booking via WhatsApp, pay using any method below and send screenshot as confirmation.</p>
+    <p style="color:rgba(255,255,255,0.5)" class="ar">بعد الحجز عبر واتساب، ادفع بأي طريقة أدناه وأرسل screenshot كتأكيد.</p>
+    <div class="payment-grid">
+      <div class="payment-card">
+        <h3>🏦 Baridi Mob (CCP)</h3>
+        <p class="en">For Algerian students — direct transfer</p>
+        <p class="ar">للطلاب الجزائريين — تحويل مباشر</p>
+        <div class="payment-detail">CCP: 40139907 Clé 22</div>
+        <div class="payment-detail" style="margin-top:8px">RIP: 00799999900 4013990768</div>
+      </div>
+      <div class="payment-card">
+        <h3>💳 RedotPay</h3>
+        <p class="en">For all countries — scan QR or send to ID</p>
+        <p class="ar">لكل الدول — سكان QR أو أرسل للـ ID</p>
+        <div class="payment-detail">ID: 1555858272</div>
+        <div class="qr-box">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=redotpay://pay?id=1555858272" alt="RedotPay QR Code">
+        </div>
+      </div>
+      <div class="payment-card">
+        <h3>💬 Contact After Payment</h3>
+        <p class="en">Send payment screenshot to confirm your booking</p>
+        <p class="ar">أرسل screenshot الدفع لتأكيد حجزك</p>
+        <a href="https://wa.me/213658950047" target="_blank" style="display:block;background:var(--g);color:white;padding:12px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;margin-top:1rem" class="en">WhatsApp: +213 658 950 047 →</a>
+        <a href="https://wa.me/213658950047" target="_blank" style="display:block;background:var(--g);color:white;padding:12px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;margin-top:1rem" class="ar">واتساب: 213 658 950 047+ ←</a>
+        <a href="mailto:mohamedgadda2@gmail.com" style="display:block;color:rgba(255,255,255,0.5);text-align:center;margin-top:0.75rem;font-size:0.85rem;text-decoration:none">mohamedgadda2@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONSULTANT -->
+<div class="consultant-section" id="consult">
+  <div class="consultant-inner">
+    <div class="consultant-photo">
+      <img src="https://i.ibb.co/placeholder/photo.jpg" alt="Mohammed Nour" onerror="this.src='https://ui-avatars.com/api/?name=Mohammed+Nour&size=200&background=006830&color=fff&bold=true&font-size=0.4'">
+    </div>
+    <div class="consultant-info">
+      <h2 class="en">Mohammed Nour</h2>
+      <h2 class="ar">محمد نور</h2>
+      <p class="title en">🇩🇿 Algerian Student in Italy | Your Personal Guide</p>
+      <p class="title ar">🇩🇿 طالب جزائري في إيطاليا | مرشدك الشخصي</p>
+      <p class="en">I went through the entire process myself — Universitaly, visa, DSU, Permesso di Soggiorno. I know every step, every document, every mistake to avoid. Let me guide you so your journey is smoother than mine.</p>
+      <p class="ar">مررت بكل العملية بنفسي — Universitaly، الفيزا، DSU، Permesso di Soggiorno. أعرف كل خطوة، كل وثيقة، كل خطأ يجب تجنبه. دعني أرشدك حتى تكون رحلتك أسهل من رحلتي.</p>
+      <div class="consult-btns">
+        <a href="https://wa.me/213658950047" target="_blank" class="btn-white en">📱 WhatsApp Me →</a>
+        <a href="https://wa.me/213658950047" target="_blank" class="btn-white ar">📱 راسلني على واتساب ←</a>
+        <a href="mailto:mohamedgadda2@gmail.com" class="btn-outline-white">✉️ mohamedgadda2@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">StudyGateItaly 🇮🇹</div>
+  <p class="en">Your gateway to studying in Italy — guides, resources and personal consultation for international students.</p>
+  <p class="ar">بوابتك للدراسة في إيطاليا — أدلة، موارد واستشارة شخصية للطلاب الدوليين.</p>
+  <p style="margin-top:1rem">
+    <a href="https://wa.me/213658950047">WhatsApp</a> ·
+    <a href="mailto:mohamedgadda2@gmail.com">Email</a>
+  </p>
+  <p style="margin-top:1rem;font-size:0.75rem">© 2026 StudyGateItaly · Not affiliated with any university or government body.</p>
+</footer>
+
+<script>
+function toggleLang(){
+  const page = document.getElementById('page');
+  const currentLang = page.getAttribute('lang');
+  page.setAttribute('lang', currentLang === 'en' ? 'ar' : 'en');
+  page.style.direction = currentLang === 'en' ? 'rtl' : 'ltr';
+}
+</script>
+</body>
+</html>
