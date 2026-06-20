@@ -1071,3 +1071,28 @@ footer{
   margin: 0 auto 1.5rem;
   line-height: 1.7;
 }
+
+/* EXPANDED CARD LAYOUT */
+.institution-card.expanded {
+  grid-column: 1 / -1;
+}
+@media (min-width: 992px) {
+  .institution-card.expanded {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .institution-card.expanded .institution-img {
+    width: 32%;
+    height: auto;
+    max-height: 100%;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+  }
+  [dir="rtl"] .institution-card.expanded .institution-img {
+    border-right: none;
+    border-left: 1px solid var(--border);
+  }
+  .institution-card.expanded .institution-info {
+    width: 68%;
+  }
+}

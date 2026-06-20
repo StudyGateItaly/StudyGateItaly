@@ -11,7 +11,6 @@ import Footer from './components/Footer'
 import AdBanner from './components/AdBanner'
 
 // Sub-pages
-import UniversityDetail from './pages/UniversityDetail'
 import ServiceDetail from './pages/ServiceDetail'
 import OrientationGuide from './pages/OrientationGuide'
 
@@ -50,17 +49,6 @@ export default function App() {
 
       {view.name === 'orientation' && (
         <OrientationGuide
-          lang={lang}
-          onBack={() => {
-            setView({ name: 'home', params: {} })
-            window.scrollTo({ top: 0, behavior: 'instant' })
-          }}
-        />
-      )}
-
-      {view.name === 'university' && (
-        <UniversityDetail
-          slug={view.params.slug}
           lang={lang}
           onBack={() => {
             setView({ name: 'home', params: {} })
