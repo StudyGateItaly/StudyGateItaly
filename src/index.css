@@ -1049,7 +1049,7 @@ footer{
   line-height: 1.6;
   color: var(--text-muted);
 }
-.orientation-whatsapp-box {
+.orientation-support-box {
   background: var(--navy);
   color: #FFFFFF;
   border-radius: 16px;
@@ -1059,12 +1059,12 @@ footer{
   margin: 4rem auto 2rem;
   box-shadow: var(--shadow-hover);
 }
-.orientation-whatsapp-box h3 {
+.orientation-support-box h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
-.orientation-whatsapp-box p {
+.orientation-support-box p {
   font-size: 1.05rem;
   color: #E2E8F0;
   max-width: 600px;

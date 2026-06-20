@@ -185,7 +185,7 @@ export default function OrientationGuide({ lang, onBack }) {
 
         <AdBanner slot="horizontal" />
 
-        <div className="orientation-whatsapp-box">
+        <div className="orientation-support-box">
           <h3>{t.supportTitle}</h3>
           <p>{t.supportDesc}</p>
           <a
