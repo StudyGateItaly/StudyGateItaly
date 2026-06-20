@@ -46,7 +46,7 @@ export default function Navbar({ lang, toggleLang, setView }) {
         <button className="lang-toggle" onClick={toggleLang}>
           عربي / EN
         </button>
-        <a href="https://wa.me/213658950047" target="_blank" rel="noopener noreferrer" className="cta-nav">
+        <a href="mailto:mohamedgadda2@gmail.com" className="cta-nav">
           {t.cta}
         </a>
       </div>

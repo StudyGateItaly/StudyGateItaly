@@ -3,7 +3,7 @@ import { translations } from '../translations'
 
 export default function JourneyCTA({ lang, setView }) {
   const t = translations[lang].journey
-  const contactUrl = 'https://wa.me/213658950047'
+  const contactUrl = 'mailto:mohamedgadda2@gmail.com'
 
   return (
     <div className="journey-section">

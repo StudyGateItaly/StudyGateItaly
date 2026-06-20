@@ -6,7 +6,7 @@ import ContactForm from '../components/ContactForm'
 export default function ServiceDetail({ slug, lang, onBack }) {
   const t = translations[lang].serviceDetail[slug]
   const navT = translations[lang].nav
-  const contactUrl = 'https://wa.me/213658950047'
+  const contactUrl = 'mailto:mohamedgadda2@gmail.com'
 
   if (!t) return <div>Service guide not found.</div>
 

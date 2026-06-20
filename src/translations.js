@@ -85,9 +85,9 @@ export const translations = {
     },
     journey: {
       title: "Start Your Italian Journey Today",
-      desc: "Have questions about pre-enrollment, deadlines, or ISEE documents? Join our free student WhatsApp group to ask senior students for peer support.",
+      desc: "Have questions about pre-enrollment, deadlines, or ISEE documents? Email us your questions to get free guidance from senior students.",
       cta1: "Read Orientation Guide",
-      cta2: "Ask a Free Question (WhatsApp)"
+      cta2: "Ask a Free Question (Email)"
     },
     footer: {
       desc: "Empowering the next generation of global scholars through free, accessible information on Italian academic excellence.",
@@ -95,7 +95,7 @@ export const translations = {
       resourcesTitle: "FREE GUIDES",
       resources: ["Scholarships", "Visa Support", "Universities"],
       companyTitle: "COMMUNITY",
-      company: ["About Us", "WhatsApp Group", "Email Support"],
+      company: ["About Us", "Email Support"],
       legalTitle: "LEGAL",
       legal: ["Privacy Policy", "Terms of Service"]
     },
@@ -251,9 +251,9 @@ export const translations = {
     },
     journey: {
       title: "ابدأ رحلتك الإيطالية اليوم",
-      desc: "هل لديك أسئلة حول التسجيل المسبق، التواريخ، أو مستندات الـ ISEE؟ انضم لمجموعة الدعم المجانية للطلاب على واتساب لتسأل الطلاب القدامى المقيمين في إيطاليا.",
+      desc: "هل لديك أسئلة حول التسجيل المسبق، التواريخ، أو مستندات الـ ISEE؟ راسلنا بالبريد الإلكتروني للحصول على توجيه مجاني من الطلاب القدامى.",
       cta1: "اقرأ دليل التوجيه",
-      cta2: "اطرح سؤالاً مجانياً (واتساب)"
+      cta2: "اطرح سؤالاً مجانياً (إيميل)"
     },
     footer: {
       desc: "تمكين الجيل القادم من الباحثين من خلال توفير معلومات مجانية وموثوقة حول التميز الأكاديمي الإيطالي.",
@@ -261,7 +261,7 @@ export const translations = {
       resourcesTitle: "أدلة مجانية",
       resources: ["المنح الدراسية", "دعم التأشيرات", "الجامعات"],
       companyTitle: "المجتمع",
-      company: ["من نحن", "مجموعة واتساب", "الدعم البريدي"],
+      company: ["من نحن", "الدعم البريدي"],
       legalTitle: "قانوني",
       legal: ["سياسة الخصوصية", "شروط الخدمة"]
     },

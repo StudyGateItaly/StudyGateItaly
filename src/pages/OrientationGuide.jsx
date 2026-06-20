@@ -62,9 +62,9 @@ export default function OrientationGuide({ lang, onBack }) {
           ]
         }
       ],
-      whatsappTitle: "Need Personalized Help?",
-      whatsappDesc: "Join our free peer-to-peer student support channel on WhatsApp. Ask questions about deadlines, CAF centers, or visa documentation directly to senior students.",
-      whatsappBtn: "Chat with Students (WhatsApp)"
+      supportTitle: "Need Personalized Help?",
+      supportDesc: "Email us directly or fill out the question form below. Our volunteer senior student advisors will review your query and reply directly to your inbox.",
+      supportBtn: "Send an Email Question"
     },
     ar: {
       title: "دليل التوجيه خطوة بخطوة",
@@ -124,9 +124,9 @@ export default function OrientationGuide({ lang, onBack }) {
           ]
         }
       ],
-      whatsappTitle: "هل تحتاج لمساعدة مخصصة؟",
-      whatsappDesc: "انضم إلى قناة دعم الطلاب المجانية على واتساب. اطرح أسئلتك حول التواريخ، ومراكز CAF، أو وثائق التأشيرة وتواصل مع طلاب قدامى مقيمين في إيطاليا.",
-      whatsappBtn: "تحدث مع الطلاب (واتساب)"
+      supportTitle: "هل تحتاج لمساعدة مخصصة؟",
+      supportDesc: "راسلنا مباشرة عبر البريد الإلكتروني أو املأ نموذج الأسئلة أدناه. سيقوم مرشدونا الطلاب بمراجعة استفسارك والرد عليك مباشرة.",
+      supportBtn: "إرسال استفسار بالبريد الإلكتروني"
     }
   }
 
@@ -186,16 +186,14 @@ export default function OrientationGuide({ lang, onBack }) {
         <AdBanner slot="horizontal" />
 
         <div className="orientation-whatsapp-box">
-          <h3>{t.whatsappTitle}</h3>
-          <p>{t.whatsappDesc}</p>
+          <h3>{t.supportTitle}</h3>
+          <p>{t.supportDesc}</p>
           <a
-            href="https://wa.me/213658950047"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:mohamedgadda2@gmail.com"
             className="btn-terracotta"
             style={{ display: 'inline-block', marginTop: '1rem' }}
           >
-            {t.whatsappBtn}
+            {t.supportBtn}
           </a>
         </div>
 

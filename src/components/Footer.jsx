@@ -45,10 +45,7 @@ export default function Footer({ lang }) {
       <div className="footer-bottom">
         <div>{t.copyright}</div>
         <div>
-          <a href="https://wa.me/213658950047" target="_blank" rel="noopener noreferrer" style={{ marginRight: '1rem' }}>
-            WhatsApp
-          </a>
-          <a href="mailto:mohamedgadda2@gmail.com">Email</a>
+          <a href="mailto:mohamedgadda2@gmail.com">mohamedgadda2@gmail.com</a>
         </div>
       </div>
     </footer>
