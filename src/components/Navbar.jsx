@@ -23,8 +23,8 @@ export default function Navbar({ lang, toggleLang, setView }) {
       <div className="nav-right">
         <ul className="nav-links">
           <li>
-            <a href="#institutions" onClick={(e) => handleLinkClick(e, '#institutions')}>
-              {t.programs}
+            <a href="#" onClick={(e) => { e.preventDefault(); setView({ name: 'orientation', params: {} }); window.scrollTo({ top: 0, behavior: 'instant' }); }}>
+              {t.orientation}
             </a>
           </li>
           <li>

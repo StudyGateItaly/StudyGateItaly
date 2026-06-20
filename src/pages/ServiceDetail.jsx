@@ -1,5 +1,7 @@
 import React from 'react'
 import { translations } from '../translations'
+import AdBanner from '../components/AdBanner'
+import ContactForm from '../components/ContactForm'
 
 export default function ServiceDetail({ slug, lang, onBack }) {
   const t = translations[lang].serviceDetail[slug]
@@ -39,6 +41,8 @@ export default function ServiceDetail({ slug, lang, onBack }) {
       <header className="subpage-header">
         <h1>{t.title}</h1>
       </header>
+
+      <AdBanner slot="horizontal" />
 
       <div className="subpage-body">
         <div className="subpage-section">
@@ -85,6 +89,12 @@ export default function ServiceDetail({ slug, lang, onBack }) {
           >
             {t.ctaText}
           </a>
+        </div>
+
+        <ContactForm lang={lang} />
+
+        <div style={{ marginTop: '3rem' }}>
+          <AdBanner slot="horizontal" />
         </div>
       </div>
     </div>

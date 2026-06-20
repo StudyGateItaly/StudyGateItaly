@@ -1,7 +1,7 @@
 import React from 'react'
 import { translations } from '../translations'
 
-export default function JourneyCTA({ lang }) {
+export default function JourneyCTA({ lang, setView }) {
   const t = translations[lang].journey
   const contactUrl = 'https://wa.me/213658950047'
 
@@ -12,9 +12,8 @@ export default function JourneyCTA({ lang }) {
         <p>{t.desc}</p>
         <div className="journey-btns">
           <a
-            href={contactUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            onClick={(e) => { e.preventDefault(); setView({ name: 'orientation', params: {} }); window.scrollTo({ top: 0, behavior: 'instant' }); }}
             className="btn-navy"
           >
             {t.cta1}

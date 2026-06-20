@@ -1,7 +1,7 @@
 import React from 'react'
 import { translations } from '../translations'
 
-export default function Hero({ lang }) {
+export default function Hero({ lang, setView }) {
   const t = translations[lang].hero
 
   return (
@@ -14,9 +14,8 @@ export default function Hero({ lang }) {
         <p>{t.desc}</p>
         <div className="hero-btns">
           <a
-            href="https://wa.me/213658950047"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            onClick={(e) => { e.preventDefault(); setView({ name: 'orientation', params: {} }); window.scrollTo({ top: 0, behavior: 'instant' }); }}
             className="btn-primary"
           >
             {t.cta1}

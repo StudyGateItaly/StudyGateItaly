@@ -1,90 +1,73 @@
 export const translations = {
   en: {
     nav: {
-      logo: "Accademia Italia",
+      logo: "StudyGateItaly",
       programs: "Programs",
       universities: "Universities",
       life: "Life in Italy",
-      expertise: "Expertise",
-      cta: "Apply Now",
+      expertise: "Student Guides",
+      orientation: "Orientation Guide",
+      cta: "Get Free Help",
       backHome: "← Back to Home"
     },
     hero: {
       title: "Your Renaissance",
       titleSpan: "Begins in Italy",
-      desc: "Expert guidance to Italy's most prestigious universities. From enrollment to your first day in Rome, Milan, or Bologna.",
-      cta1: "Book a Free Consultation",
-      cta2: "Explore Programs"
+      desc: "A free, comprehensive portal for international students. Step-by-step guides on admissions, student visas, housing, and 100% regional tuition waivers.",
+      cta1: "Read Orientation Guide",
+      cta2: "Search 20+ Universities"
     },
     stats: [
-      { num: "10+", label: "YEARS EXPERIENCE" },
-      { num: "500+", label: "STUDENTS PLACED" },
-      { num: "98%", label: "VISA SUCCESS" }
+      { num: "20+", label: "DETAILED UNIVERSITIES" },
+      { num: "100%", label: "FREE STUDENT GUIDES" },
+      { num: "€0", label: "CONSULTING FEES" }
     ],
     institutions: {
-      eyebrow: "World-Class Institutions",
-      title: "Study at Historic Italian Centers of Learning",
-      desc: "We help you gain admission to Europe's most renowned public and private institutions.",
-      cards: [
-        {
-          id: "bologna",
-          title: "University of Bologna",
-          desc: "Explore the world's oldest university in continuous operation, a beacon of law and humanities.",
-          cta: "View Programs →",
-          img: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=600&q=80"
-        },
-        {
-          id: "sapienza",
-          title: "Sapienza University",
-          desc: "Study in the heart of Rome at one of Europe's largest universities, leading in aerospace and classics.",
-          cta: "View Programs →",
-          img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80"
-        },
-        {
-          id: "polimi",
-          title: "Politecnico di Milano",
-          desc: "Master design and engineering in Italy's industrial capital, Milan, at a global hub for innovation.",
-          cta: "View Programs →",
-          img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80"
-        }
-      ]
+      eyebrow: "Italian University Portal",
+      title: "Find Your Future University",
+      desc: "Browse admission deadlines, links, and English-taught programs for 20 top Italian institutions.",
+      searchPlaceholder: "Search by university name, course, or city...",
+      searchFilterAll: "All Institutions",
+      searchFilterUni: "General Universities",
+      searchFilterPoly: "Polytechnics",
+      cardCta: "View Admission Deadlines →"
     },
     expertise: {
-      eyebrow: "Our Expertise",
-      title: "A Seamless Path to Enrollment",
-      desc: "We simplify the complex journey of international education with bespoke services tailored to your academic goals and lifestyle needs.",
+      eyebrow: "Our Free Guides",
+      title: "Everything You Need to Know",
+      desc: "We compile all essential administrative, financial, and logistical procedures to make your relocation to Italy smooth and stress-free.",
       visa: {
         id: "visa",
         title: "Visa Support",
-        desc: "End-to-end guidance through the D-type student visa process, ensuring zero errors or application delays.",
+        desc: "End-to-end instructions for the D-type national student visa process, ensuring zero application errors or delays.",
         bullets: [
           "Pre-enrollment verification on the Universitaly portal",
           "Embassy interview preparation & document checklists",
-          "Certified translator references & application tracking"
+          "Certified translation and legalization guidelines"
         ],
-        btn: "Request Visa Guide"
+        btn: "Read Visa Guide"
       },
       scholarship: {
         id: "scholarship",
-        title: "Scholarship Guidance",
-        desc: "Expert strategies to secure DSU scholarships and university-specific financial aid packages.",
+        title: "Scholarships (DSU)",
+        desc: "How to secure regional DSU scholarships, full tuition fee waivers, and annual cash stipends.",
         bullets: [
-          "Foreign income ISEE/ISEEU calculations & certifications",
-          "City-specific scholarship portal deadline monitoring",
-          "Free housing slots and student cafeteria meal card claims"
+          "Foreign household income ISEE/ISEEU calculations",
+          "Regional portal deadline and submission monitoring",
+          "Free accommodation and university canteen claims"
         ],
-        btn: "Check Scholarship Eligibility"
+        btn: "Read Scholarship Guide"
       },
       housing: {
         id: "housing",
         title: "Housing Assistance",
-        desc: "Curated residential options in safe, student-friendly neighborhoods near your campus.",
+        desc: "Find student-friendly rooms near your campus while avoiding deposits scams.",
         bullets: [
-          "Lease contract translation and legal clause reviews",
-          "Ready-to-send message templates in Italian for landlords",
-          "Verified listings to prevent online rental scams"
+          "Lease contract registration with Agenzia delle Entrate",
+          "Copy-paste email templates in Italian for landlords",
+          "Verified portals and search advice"
         ],
-        btn: "Find Accommodation"
+        btn: "Read Housing Guide"
       }
     },
     experience: {
@@ -102,72 +85,19 @@ export const translations = {
     },
     journey: {
       title: "Start Your Italian Journey Today",
-      desc: "Our advisors are ready to help you navigate the application process and ensure your future in Italy's top institutions.",
-      cta1: "Request a Brochure",
-      cta2: "Book Consultation"
+      desc: "Have questions about pre-enrollment, deadlines, or ISEE documents? Join our free student WhatsApp group to ask senior students for peer support.",
+      cta1: "Read Orientation Guide",
+      cta2: "Ask a Free Question (WhatsApp)"
     },
     footer: {
-      desc: "Empowering the next generation of global scholars through Italian academic excellence.",
-      copyright: "© 2026 Accademia Italia. All rights reserved.",
-      resourcesTitle: "RESOURCES",
+      desc: "Empowering the next generation of global scholars through free, accessible information on Italian academic excellence.",
+      copyright: "© 2026 StudyGateItaly. Created as a free public student utility.",
+      resourcesTitle: "FREE GUIDES",
       resources: ["Scholarships", "Visa Support", "Universities"],
-      companyTitle: "COMPANY",
-      company: ["About Us", "Contact Us", "Success Stories"],
+      companyTitle: "COMMUNITY",
+      company: ["About Us", "WhatsApp Group", "Email Support"],
       legalTitle: "LEGAL",
       legal: ["Privacy Policy", "Terms of Service"]
-    },
-    universityDetail: {
-      bologna: {
-        title: "University of Bologna",
-        tagline: "Alma Mater Studiorum — Founded in 1088 AD",
-        history: "The University of Bologna is the oldest university in the Western world, paving the way for modern higher education. Historically known for pioneering legal and humanities studies, it continues to rank among the top universities globally.",
-        tuition: "€156 to €3,000 / year (Based on family income; fully waiverable via DSU scholarships)",
-        requirements: "High school diploma (12 years minimum schooling), B2 English certificate (IELTS 6.0 / TOEFL 80), and specific entrance exams (TOLC-F, TOLC-E, or SAT depending on course).",
-        livingCost: "€700 - €950 / month (Includes housing, canteens, transit, and ccia study materials)",
-        coursesTitle: "Top English-Taught Programs",
-        courses: [
-          { name: "Medicine and Surgery", level: "Single Cycle (6 Years)", notes: "Admission via national IMAT exam" },
-          { name: "Business and Economics (CLABE)", level: "Bachelor (3 Years)", notes: "Requires SAT or English TOLC-E" },
-          { name: "Economics and Finance (CLEF)", level: "Bachelor (3 Years)", notes: "Requires SAT or English TOLC-E" },
-          { name: "Automation Engineering", level: "Master (2 Years)", notes: "Requires portfolio and B2 English" },
-          { name: "Digital Humanities and Digital Knowledge", level: "Master (2 Years)", notes: "Interview and CV review" }
-        ],
-        ctaText: "Apply to University of Bologna"
-      },
-      sapienza: {
-        title: "Sapienza University of Rome",
-        tagline: "The Ancient Heart of Roman Academia — Founded in 1303 AD",
-        history: "Sapienza is one of the largest universities in Europe, housing over 115,000 students. Located in the center of historic Rome, Sapienza is globally renowned for Classics, Ancient History, and Aerospace Engineering studies.",
-        tuition: "€150 to €2,900 / year (Reducible via LazioDisco regional income declarations)",
-        requirements: "High school diploma, English language certification (B2 minimum), and successful completion of program-specific admission tests.",
-        livingCost: "€800 - €1,050 / month (Rome is a major capital; shared rooms start around €400-500)",
-        coursesTitle: "Top English-Taught Programs",
-        courses: [
-          { name: "Nursing", level: "Bachelor (3 Years)", notes: "Requires admission test" },
-          { name: "Applied Computer Science and AI", level: "Bachelor (3 Years)", notes: "Requires SAT or English TOLC-I" },
-          { name: "Space and Astronautical Engineering", level: "Master (2 Years)", notes: "Requires Bachelor in aerospace/mechanics" },
-          { name: "Classical Archaeology", level: "Master (2 Years)", notes: "CV screening and academic transcripts check" },
-          { name: "Data Science", level: "Master (2 Years)", notes: "Strong math/statistical background required" }
-        ],
-        ctaText: "Apply to Sapienza University"
-      },
-      polimi: {
-        title: "Politecnico di Milano",
-        tagline: "Italy's Premier Tech & Design Hub — Founded in 1863 AD",
-        history: "Politecnico di Milano is the top-ranked technical university in Italy and among the best in Europe. It is the core motor of Milan's high-tech industrial economy, generating elite architects, designers, and engineers.",
-        tuition: "€895 to €3,900 / year (Reduced to low flat rates with ISEE submissions)",
-        requirements: "High school diploma, English IELTS 6.0/B2, and specific admissions exams (TOLC-I, SAT, or architectural entrance test).",
-        livingCost: "€900 - €1,200 / month (Milan is the financial center; shared rooms average €500-600)",
-        coursesTitle: "Top English-Taught Programs",
-        courses: [
-          { name: "Architectural Design", level: "Bachelor (3 Years)", notes: "Requires national admission test" },
-          { name: "Computer Science and Engineering", level: "Master (2 Years)", notes: "Portfolio + GPA check" },
-          { name: "Mechanical Engineering", level: "Master (2 Years)", notes: "GPA minimum 70/100 equivalent" },
-          { name: "Integrated Product Design", level: "Master (2 Years)", notes: "Design portfolio required" },
-          { name: "Management Engineering", level: "Master (2 Years)", notes: "GMAT / GRE highly recommended" }
-        ],
-        ctaText: "Apply to Politecnico di Milano"
-      }
     },
     serviceDetail: {
       visa: {
@@ -192,7 +122,7 @@ export const translations = {
           "Embassy Submission: Attend the visa interview, submit your physical document package, and pay the visa fees (€50).",
           "Permesso Arrival: Within 8 days of arriving in Italy, you must apply for your Permesso di Soggiorno (Residence Permit) at the post office."
         ],
-        ctaText: "Book Personal Visa Consultation"
+        ctaText: "Ask a Free Visa Question"
       },
       scholarship: {
         title: "DSU / Regional Scholarships — Detailed Guide",
@@ -212,7 +142,7 @@ export const translations = {
           "Consular Legalization: All documents must be officially translated into Italian, legalized by the Italian Embassy or Apostilled.",
           "CAF Center: Send files to a qualified Italian CAF center to calculate your ISEE/ISEEU score. To qualify, ISEE must generally be below €25,000."
         ],
-        ctaText: "Check DSU Scholarship Eligibility"
+        ctaText: "Ask a Scholarship Question"
       },
       housing: {
         title: "Finding Student Housing in Italy — Detailed Guide",
@@ -231,96 +161,79 @@ export const translations = {
           "Spotahome & Uniplaces: Trusted platforms for secure online bookings (use code discounts where applicable).",
           "Facebook Groups: Good for finding flatmates, but be highly alert to deposit transfer requests."
         ],
-        ctaText: "Get Housing Verification Help"
+        ctaText: "Ask a Housing Question"
       }
     }
   },
   ar: {
     nav: {
-      logo: "أكاديميا إيطاليا",
+      logo: "StudyGateItaly",
       programs: "البرامج",
       universities: "الجامعات",
       life: "الحياة في إيطاليا",
-      expertise: "الخبرات",
-      cta: "سجل الآن",
+      expertise: "أدلة الطلاب",
+      orientation: "دليل التوجيه",
+      cta: "احصل على مساعدة",
       backHome: "← العودة للرئيسية"
     },
     hero: {
       title: "نهضتك الأكاديمية",
       titleSpan: "تبدأ في إيطاليا",
-      desc: "إرشاد خبير لأرقى الجامعات في إيطاليا. من التسجيل إلى أول يوم لك في روما، ميلان، أو بولونيا.",
-      cta1: "احجز استشارة مجانية",
-      cta2: "استكشف البرامج"
+      desc: "بوابة مجانية وشاملة للطلاب الدوليين. أدلة تفصيلية خطوة بخطوة للقبول الجامعي، تأشيرات الطلاب، السكن، والإعفاءات الكاملة من الرسوم عبر المنح الدراسية الإقليمية.",
+      cta1: "اقرأ دليل التوجيه",
+      cta2: "ابحث في +20 جامعة"
     },
     stats: [
-      { num: "10+", label: "سنوات الخبرة" },
-      { num: "500+", label: "طالب تم تسجيله" },
-      { num: "98%", label: "نسبة نجاح الفيزا" }
+      { num: "20+", label: "جامعات مشروحة بالتفصيل" },
+      { num: "100%", label: "أدلة طلابية مجانية" },
+      { num: "€0", label: "رسوم استشارات ودعم" }
     ],
     institutions: {
-      eyebrow: "مؤسسات عالمية المستوى",
-      title: "ادرس في المراكز التاريخية للتعليم الإيطالي",
-      desc: "نحن نساعدك في الحصول على القبول في أشهر المؤسسات الحكومية والخاصة في أوروبا.",
-      cards: [
-        {
-          id: "bologna",
-          title: "جامعة بولونيا",
-          desc: "استكشف أقدم جامعة في العالم مستمرة في العمل، منارة القانون والعلوم الإنسانية.",
-          cta: "عرض البرامج ←",
-          img: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=600&q=80"
-        },
-        {
-          id: "sapienza",
-          title: "جامعة سابينزا",
-          desc: "ادرس في قلب روما في واحدة من أكبر جامعات أوروبا، الرائدة في هندسة الطيران والعلوم الكلاسيكية.",
-          cta: "عرض البرامج ←",
-          img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80"
-        },
-        {
-          id: "polimi",
-          title: "جامعة بوليتكنيك ميلانو",
-          desc: "أتقن التصميم والهندسة في العاصمة الصناعية لإيطاليا، ميلانو، في مركز عالمي للابتكار.",
-          cta: "عرض البرامج ←",
-          img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80"
-        }
-      ]
+      eyebrow: "بوابة الجامعات الإيطالية",
+      title: "ابحث عن جامعتك المستقبلية",
+      desc: "تصفح مواعيد التقديم، الروابط الرسمية، والبرامج المتاحة باللغة الإنجليزية في 20 جامعة إيطالية رائدة.",
+      searchPlaceholder: "ابحث باسم الجامعة، التخصص، أو المدينة...",
+      searchFilterAll: "جميع المؤسسات",
+      searchFilterUni: "جامعات عامة",
+      searchFilterPoly: "جامعات تقنية",
+      cardCta: "عرض مواعيد وشروط التقديم ←"
     },
     expertise: {
-      eyebrow: "خبراتنا",
-      title: "مسار سلس للتسجيل والقبول",
-      desc: "نبسط الرحلة المعقدة للتعليم الدولي من خلال خدمات مخصصة تلبي أهدافك الأكاديمية واحتياجات نمط حياتك.",
+      eyebrow: "أدلتنا المجانية",
+      title: "كل ما تحتاج لمعرفته",
+      desc: "نحن نجمع لك كل الإجراءات الإدارية والمالية واللوجستية الأساسية لجعل انتقالك للدراسة في إيطاليا سلساً وخالياً من المتاعب.",
       visa: {
         id: "visa",
         title: "دعم التأشيرة",
-        desc: "إرشاد شامل خلال عملية الحصول على تأشيرة الطالب من النوع D، مما يضمن خلو الملف من الأخطاء أو التأخير.",
+        desc: "تعليمات شاملة للحصول على تأشيرة الطالب الوطنية من النوع D، مما يضمن خلو ملفك من الأخطاء أو التأخير.",
         bullets: [
           "التحقق من التسجيل المسبق على بوابة Universitaly",
           "التحضير لمقابلة السفارة وقوائم مراجعة الوثائق",
-          "مراجع المترجمين المعتمدين ومتابعة حالة الطلب"
+          "إرشادات الترجمة المعتمدة والتصديق القنصلي"
         ],
-        btn: "طلب دليل التأشيرة"
+        btn: "اقرأ دليل التأشيرة"
       },
       scholarship: {
         id: "scholarship",
-        title: "توجيه المنح الدراسية",
-        desc: "استراتيجيات خبيرة لتأمين منح DSU وحزم المساعدات المالية الخاصة بالجامعة.",
+        title: "المنح الدراسية (DSU)",
+        desc: "كيفية تأمين منح DSU الإقليمية، والإعفاء الكامل من الرسوم الدراسية، والحصول على السكن والراتب السنوي.",
         bullets: [
-          "حسابات ISEE/ISEEU للدخل الخارجي والشهادات المطلوبة",
-          "متابعة المواعيد النهائية لبوابات المنح الدراسية لكل مدينة",
-          "تقديم طلبات السكن الجامعي المجاني وبطاقة وجبات الكافتيريا"
+          "حسابات دخل الأسرة الخارجي ISEE/ISEEU للطلاب",
+          "متابعة المواعيد النهائية وتقديم الملفات الإقليمية",
+          "تقديم طلبات السكن والوجبات اليومية المجانية"
         ],
-        btn: "التحقق من الأهلية للمنح"
+        btn: "اقرأ دليل المنح"
       },
       housing: {
         id: "housing",
         title: "المساعدة في السكن",
-        desc: "خيارات سكنية منسقة في أحياء آمنة ومناسبة للطلاب بالقرب من حرمك الجامعي.",
+        desc: "ابحث عن غرف سكنية مناسبة وآمنة بالقرب من حرمك الجامعي مع تجنب عمليات الاحتيال المالي.",
         bullets: [
-          "ترجمة عقد الإيجار ومراجعة البنود القانونية",
-          "قوالب رسائل جاهزة بالإيطالية للتواصل مع المؤجرين",
-          "إيجاد خيارات سكنية موثوقة لتجنب عمليات الاحتيال"
+          "تسجيل عقود الإيجار لدى مصلحة الضرائب الإيطالية",
+          "قوالب جاهزة بالإيطالية للتواصل المباشر مع الملاك",
+          "منصات البحث الموثوقة ونصائح الحجز الآمن"
         ],
-        btn: "البحث عن سكن"
+        btn: "اقرأ دليل السكن"
       }
     },
     experience: {
@@ -338,72 +251,19 @@ export const translations = {
     },
     journey: {
       title: "ابدأ رحلتك الإيطالية اليوم",
-      desc: "مستشارونا مستعدون لمساعدتك في اجتياز عملية التقديم وضمان مستقبلك في أفضل المؤسسات الإيطالية.",
-      cta1: "طلب كتيب معلومات",
-      cta2: "احجز استشارة"
+      desc: "هل لديك أسئلة حول التسجيل المسبق، التواريخ، أو مستندات الـ ISEE؟ انضم لمجموعة الدعم المجانية للطلاب على واتساب لتسأل الطلاب القدامى المقيمين في إيطاليا.",
+      cta1: "اقرأ دليل التوجيه",
+      cta2: "اطرح سؤالاً مجانياً (واتساب)"
     },
     footer: {
-      desc: "تمكين الجيل القادم من الباحثين العالميين من خلال التميز الأكاديمي الإيطالي.",
-      copyright: "© 2026 أكاديميا إيطاليا. جميع الحقوق محفوظة.",
-      resourcesTitle: "الموارد",
+      desc: "تمكين الجيل القادم من الباحثين من خلال توفير معلومات مجانية وموثوقة حول التميز الأكاديمي الإيطالي.",
+      copyright: "© 2026 StudyGateItaly. تم إنشاؤه كبوابة عامة مجانية لخدمة الطلاب.",
+      resourcesTitle: "أدلة مجانية",
       resources: ["المنح الدراسية", "دعم التأشيرات", "الجامعات"],
-      companyTitle: "الشركة",
-      company: ["من نحن", "اتصل بنا", "قصص النجاح"],
+      companyTitle: "المجتمع",
+      company: ["من نحن", "مجموعة واتساب", "الدعم البريدي"],
       legalTitle: "قانوني",
       legal: ["سياسة الخصوصية", "شروط الخدمة"]
-    },
-    universityDetail: {
-      bologna: {
-        title: "جامعة بولونيا",
-        tagline: "أقدم جامعة في العالم الغربي — تأسست عام 1088 م",
-        history: "جامعة بولونيا هي أقدم جامعة في العالم الغربي، مهدت الطريق للتعليم العالي الحديث. اشتهرت تاريخياً بريادتها في دراسات القانون والعلوم الإنسانية، وتستمر في التصنيف بين أفضل الجامعات عالمياً.",
-        tuition: "156 إلى 3,000 يورو / سنة (تعتمد على دخل الأسرة؛ معفاة بالكامل عبر منح DSU)",
-        requirements: "شهادة الثانوية العامة (12 سنة دراسية كحد أدنى)، شهادة لغة إنجليزية مستوى B2 (IELTS 6.0 كحد أدنى)، واجتياز اختبارات القبول المحددة للبرنامج (TOLC-F أو TOLC-E أو SAT).",
-        livingCost: "700 - 950 يورو / شهرياً (تشمل السكن، وجبات الكافتيريا، النقل، والمواد الدراسية)",
-        coursesTitle: "أبرز البرامج المتاحة باللغة الإنجليزية",
-        courses: [
-          { name: "الطب والجراحة", level: "دورة موحدة (6 سنوات)", notes: "القبول عبر اختبار IMAT الوطني" },
-          { name: "إدارة الأعمال والاقتصاد (CLABE)", level: "بكالوريوس (3 سنوات)", notes: "تتطلب اختبار SAT أو English TOLC-E" },
-          { name: "الاقتصاد والتمويل (CLEF)", level: "بكالوريوس (3 سنوات)", notes: "تتطلب اختبار SAT أو English TOLC-E" },
-          { name: "الهندسة الآلية", level: "ماجستير (سنتين)", notes: "تتطلب ملف أعمال واختبار لغة B2" },
-          { name: "العلوم الإنسانية الرقمية والمعرفة الرقمية", level: "ماجستير (سنتين)", notes: "تقييم ملف السيرة الذاتية ومقابلة شفهية" }
-        ],
-        ctaText: "قدم الآن لجامعة بولونيا"
-      },
-      sapienza: {
-        title: "جامعة سابينزا في روما",
-        tagline: "القلب الأثري للأكاديميا الرومانية — تأسست عام 1303 م",
-        history: "جامعة سابينزا هي واحدة من أكبر الجامعات في أوروبا، وتضم أكثر من 115,000 طالب وطالبة. تقع في وسط روما التاريخية، وتشتهر عالمياً بدراسات العلوم الكلاسيكية، التاريخ القديم، وهندسة الطيران.",
-        tuition: "150 إلى 2,900 يورو / سنة (مع إمكانية التخفيض عبر تصاريح دخل LazioDisco الإقليمية)",
-        requirements: "شهادة الثانوية العامة، إثبات إجادة اللغة الإنجليزية (B2 كحد أدنى)، واجتياز اختبارات القبول الخاصة بالبرنامج المحدد.",
-        livingCost: "800 - 1,050 يورو / شهرياً (روما عاصمة كبرى؛ تبدأ الغرف المشتركة من 400-500 يورو)",
-        coursesTitle: "أبرز البرامج المتاحة باللغة الإنجليزية",
-        courses: [
-          { name: "التمريض", level: "بكالوريوس (3 سنوات)", notes: "تتطلب اختبار قبول" },
-          { name: "علوم الكمبيوتر التطبيقية والذكاء الاصطناعي", level: "بكالوريوس (3 سنوات)", notes: "تتطلب اختبار SAT أو English TOLC-I" },
-          { name: "هندسة الفضاء والطيران", level: "ماجستير (سنتين)", notes: "تتطلب بكالوريوس في الطيران أو الميكانيكا" },
-          { name: "علم الآثار الكلاسيكي", level: "ماجستير (سنتين)", notes: "فحص السيرة الذاتية وكشوف النقاط الأكاديمية" },
-          { name: "علم البيانات", level: "ماجستير (سنتين)", notes: "تتطلب خلفية قوية في الرياضيات والإحصاء" }
-        ],
-        ctaText: "قدم الآن لجامعة سابينزا"
-      },
-      polimi: {
-        title: "جامعة بوليتكنيك ميلانو",
-        tagline: "أبرز مراكز التكنولوجيا والتصميم في إيطاليا — تأسست عام 1863 م",
-        history: "بوليتكنيك ميلانو هي الجامعة التقنية الأولى في إيطاليا ومن بين الأفضل في أوروبا. تمثل المحرك الأساسي للاقتصاد الصناعي عالي التكنولوجيا في ميلانو، وتخرج نخبة المهندسين والمصممين والمعماريين.",
-        tuition: "895 إلى 3,900 يورو / سنة (تخفض لرسوم مسطحة منخفضة للغاية بعد تقديم ISEE)",
-        requirements: "شهادة الثانوية العامة، لغة إنجليزية IELTS 6.0/B2 كحد أدنى، واختبارات القبول الهندسية المحددة (TOLC-I أو SAT).",
-        livingCost: "900 - 1,200 يورو / شهرياً (ميلانو المركز المالي؛ معدل الغرف المشتركة 500-600 يورو)",
-        coursesTitle: "أبرز البرامج المتاحة باللغة الإنجليزية",
-        courses: [
-          { name: "التصميم المعماري", level: "بكالوريوس (3 سنوات)", notes: "تتطلب اختبار القبول الوطني" },
-          { name: "علوم وهندسة الكمبيوتر", level: "ماجستير (سنتين)", notes: "فحص المعدل التراكمي + ملف الأعمال" },
-          { name: "الهندسة الميكانيكية", level: "ماجستير (سنتين)", notes: "الحد الأدنى للمعدل التراكمي ما يعادل 70/100" },
-          { name: "تصميم المنتجات المتكاملة", level: "ماجستير (سنتين)", notes: "تتطلب تقديم ملف أعمال تصميمية" },
-          { name: "الهندسة الإدارية", level: "ماجستير (سنتين)", notes: "اختبار GMAT / GRE موصى به للغاية" }
-        ],
-        ctaText: "قدم الآن لبوليتكنيك ميلانو"
-      }
     },
     serviceDetail: {
       visa: {
@@ -428,7 +288,7 @@ export const translations = {
           "تقديم الملف: احضر مقابلة السفارة، وسلم الملف الورقي الأصلي، وادفع رسوم التأشيرة (50 يورو).",
           "تصريح الإقامة: خلال 8 أيام من وصولك لإيطاليا، يجب التقدم بطلب للحصول على تصريح إقامة الطالب عبر مكتب البريد."
         ],
-        ctaText: "احجز استشارة خاصة للتأشيرة"
+        ctaText: "اسأل عن التأشيرة مجاناً"
       },
       scholarship: {
         title: "منح DSU والمنح الإقليمية — دليل تفصيلي",
@@ -448,7 +308,7 @@ export const translations = {
           "التصديق القنصلي: يجب ترجمة جميع الوثائق رسمياً للغة الإيطالية وتصديقها من السفارة أو الحصول على الأبوستيل.",
           "حساب ISEE: أرسل الملفات لمركز CAF إيطالي معتمد لحساب درجة ISEE الخاصة بك. للتأهل، يجب أن يكون المجموع عموماً أقل من 25,000 يورو."
         ],
-        ctaText: "تحقق من أهليتك لمنح DSU"
+        ctaText: "اسأل عن المنح مجاناً"
       },
       housing: {
         title: "إيجاد السكن الطلابي في إيطاليا — دليل تفصيلي",
@@ -460,15 +320,15 @@ export const translations = {
           "تحقق من التكاليف: اسأل إن كانت الفواتير (spese condominiali, riscaldamento, internet) متضمنة في الإيجار أم إضافية."
         ],
         section2Title: "نموذج رسالة للمؤجر باللغة الإيطالية",
-        template: `Gentile Proprietario,\n\nMi chiamo [Nome] e sono uno studente internazionale iscritto al corso di [Corso] presso l'università. Sto cercando una camera singola a partire da [Mese]. Sono una persona ordinata, seria e non fumatore.\n\nSarei felice di concordare una videochiamata per conoscerci e visionare la stanza.\n\nCordiali saluti,\n[Nome]\n[Telefono/Email]`,
+        template: `Gentile Proprietario,\n\nMi chiamo [Nome] e sono uno studente internazionale iscritto al corso di [Corso] presso l'università. Sto cercando una camera singola a partire da [Mese]. Sono una persona ordinata, seria e non fumatore.\n\nSarei felice di concordare una videochيامية لتعارف ومعاينة الغرفة.\n\nCordiali saluti,\n[Nome]\n[Telefono/Email]`,
         section3Title: "أفضل المواقع ومنصات البحث",
         steps: [
           "Idealista & Immobiliare: أفضل بوابتين للعقارات الخاصة والتواصل المباشر مع الملاك.",
           "Spotahome & Uniplaces: منصات موثوقة لحجز السكن عبر الإنترنت بشكل آمن مع خصومات إضافية.",
           "مجموعات فيسبوك: جيدة للبحث عن رفقاء سكن، لكن كن على أهبة الاستعداد والحذر التام من طلبات تحويل العربون."
         ],
-        ctaText: "احصل على مساعدة للتحقق من السكن"
+        ctaText: "اسأل عن السكن مجاناً"
       }
     }
   }
-}
+};

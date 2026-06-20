@@ -8,10 +8,12 @@ import Expertise from './components/Expertise'
 import Experience from './components/Experience'
 import JourneyCTA from './components/JourneyCTA'
 import Footer from './components/Footer'
+import AdBanner from './components/AdBanner'
 
 // Sub-pages
 import UniversityDetail from './pages/UniversityDetail'
 import ServiceDetail from './pages/ServiceDetail'
+import OrientationGuide from './pages/OrientationGuide'
 
 export default function App() {
   const [lang, setLang] = useState('en')
@@ -34,13 +36,26 @@ export default function App() {
       {view.name === 'home' && (
         <>
           <SubNavbar lang={lang} setView={setView} />
-          <Hero lang={lang} />
+          <Hero lang={lang} setView={setView} />
           <StatsBar lang={lang} />
+          <div className="section" style={{ padding: '0 2rem' }}>
+            <AdBanner slot="horizontal" />
+          </div>
           <Institutions lang={lang} setView={setView} />
           <Expertise lang={lang} setView={setView} />
           <Experience lang={lang} />
-          <JourneyCTA lang={lang} />
+          <JourneyCTA lang={lang} setView={setView} />
         </>
+      )}
+
+      {view.name === 'orientation' && (
+        <OrientationGuide
+          lang={lang}
+          onBack={() => {
+            setView({ name: 'home', params: {} })
+            window.scrollTo({ top: 0, behavior: 'instant' })
+          }}
+        />
       )}
 
       {view.name === 'university' && (

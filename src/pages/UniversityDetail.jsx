@@ -1,24 +1,29 @@
 import React from 'react'
+import { universitiesData } from '../data/universities'
 import { translations } from '../translations'
+import AdBanner from '../components/AdBanner'
 
 export default function UniversityDetail({ slug, lang, onBack }) {
-  const t = translations[lang].universityDetail[slug]
+  const uni = universitiesData.find((u) => u.id === slug)
   const navT = translations[lang].nav
-  const contactUrl = 'https://wa.me/213658950047'
 
-  if (!t) return <div>University not found.</div>
+  if (!uni) return <div style={{ padding: '4rem', textAlign: 'center' }}>University profile not found.</div>
+
+  const t = uni[lang]
 
   // Localized headers for metadata
   const metaLabels = {
     en: {
       tuition: "Annual Tuition",
       requirements: "General Requirements",
-      living: "Average Cost of Living"
+      living: "Average Cost of Living",
+      deadline: "Application Deadline"
     },
     ar: {
       tuition: "الرسوم الدراسية السنوية",
       requirements: "شروط القبول العامة",
-      living: "متوسط تكلفة المعيشة"
+      living: "متوسط تكلفة المعيشة",
+      deadline: "آخر موعد للتقديم"
     }
   }
 
@@ -60,22 +65,28 @@ export default function UniversityDetail({ slug, lang, onBack }) {
           <p className="subpage-intro">{t.history}</p>
         </div>
 
-        <div className="uni-meta-grid">
-          <div className="uni-meta-item">
-            <h4>{metaLabels[lang].tuition}</h4>
-            <p>{t.tuition}</p>
+        <div className="uni-meta-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
+          <div className="uni-meta-item" style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--border)' }}>
+            <h4 style={{ color: 'var(--terracotta)', fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: '700' }}>{metaLabels[lang].tuition}</h4>
+            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--navy)' }}>{t.tuition}</p>
           </div>
-          <div className="uni-meta-item">
-            <h4>{metaLabels[lang].requirements}</h4>
-            <p>{t.requirements}</p>
+          <div className="uni-meta-item" style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--border)' }}>
+            <h4 style={{ color: 'var(--terracotta)', fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: '700' }}>{metaLabels[lang].requirements}</h4>
+            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--navy)' }}>{t.requirements}</p>
           </div>
-          <div className="uni-meta-item">
-            <h4>{metaLabels[lang].living}</h4>
-            <p>{t.livingCost}</p>
+          <div className="uni-meta-item" style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--border)' }}>
+            <h4 style={{ color: 'var(--terracotta)', fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: '700' }}>{metaLabels[lang].living}</h4>
+            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--navy)' }}>{t.livingCost}</p>
+          </div>
+          <div className="uni-meta-item" style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--border)' }}>
+            <h4 style={{ color: 'var(--terracotta)', fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: '700' }}>{metaLabels[lang].deadline}</h4>
+            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--navy)', fontWeight: '600' }}>{t.deadline}</p>
           </div>
         </div>
 
-        <div className="subpage-section">
+        <AdBanner slot="horizontal" />
+
+        <div className="subpage-section" style={{ marginTop: '3rem' }}>
           <h2>{t.coursesTitle}</h2>
           <div className="courses-table-container">
             <table className="courses-table">
@@ -99,16 +110,23 @@ export default function UniversityDetail({ slug, lang, onBack }) {
           </div>
         </div>
 
-        <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+        <div style={{ marginTop: '4rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
           <a
-            href={contactUrl}
+            href={uni.officialLink}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-terracotta"
-            style={{ display: 'inline-block' }}
+            style={{ display: 'inline-block', padding: '1rem 2.5rem', fontSize: '1rem' }}
           >
             {t.ctaText}
           </a>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+            {lang === 'ar' ? 'سيفتح هذا الرابط الموقع الرسمي للجامعة مباشرة' : 'This link opens the official university application portal directly.'}
+          </span>
+        </div>
+
+        <div style={{ marginTop: '3rem' }}>
+          <AdBanner slot="horizontal" />
         </div>
       </div>
     </div>
