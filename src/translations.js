@@ -71,17 +71,47 @@ export const translations = {
       }
     },
     experience: {
-      eyebrow: "The Student Experience",
+      eyebrow: "Daily Student Life",
       quote: "\"Italy is not just a place to study; it is a place to live, breathe, and evolve amidst centuries of human achievement.\"",
-      title: "Culture, History, and Innovation",
-      desc: "Life in Italy offers an unparalleled blend of academic rigor and cultural enrichment. Walk through history every day on your way to class, and immerse yourself in a society that values the \"Dolce Vita\" as much as professional excellence.",
+      title: "Culture, History, and Daily Adventures",
+      desc: "Life in Italy is more than lectures. It's about taking a train to the mountains, biking through historic streets, and watching the sunset over the Mediterranean.",
       list: [
         "Mediterranean lifestyle & cuisine",
         "Travel connected to the heart of Europe",
         "High-speed rail connections across Europe"
       ],
-      img1: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80",
-      img2: "https://images.unsplash.com/photo-1549880181-56a44cf4a9a1?w=500&q=80"
+      stories: [
+        {
+          img: "student-life/life1.jpg",
+          author: "Anas (Bologna)",
+          quote: "Escaping the study halls for a weekend in the hills. The high-speed trains connect our city directly to nature.",
+          tag: "Mountain Retreats"
+        },
+        {
+          img: "student-life/life2.jpg",
+          author: "Sarah (Milan)",
+          quote: "Sunsets over Lake Como. Studying in Lombardy means you are never more than an hour away from alpine lakes.",
+          tag: "Lake Como"
+        },
+        {
+          img: "student-life/life3.jpg",
+          author: "Youssef (Pavia)",
+          quote: "Biking to my morning lecture under the golden autumn trees of Pavia. The pace of life is beautiful here.",
+          tag: "Daily Commute"
+        },
+        {
+          img: "student-life/life4.jpg",
+          author: "Maria (Genoa)",
+          quote: "Weekend trips to the Ligurian coast. Regional trains are cheap for students, making Italy our campus.",
+          tag: "Coastal Weekends"
+        },
+        {
+          img: "student-life/life5.jpg",
+          author: "Luca (Lecco)",
+          quote: "Lakeside nights in northern Italy. The scenery looks like an oil painting come to life, inspiring us every day.",
+          tag: "Inspiration"
+        }
+      ]
     },
     journey: {
       title: "Start Your Italian Journey Today",
@@ -237,17 +267,47 @@ export const translations = {
       }
     },
     experience: {
-      eyebrow: "تجربة الطالب",
+      eyebrow: "يوميات حياة الطلاب",
       quote: "\"إيطاليا ليست مجرد مكان للدراسة؛ إنها مكان للعيش والتنفس والتطور وسط قرون من الإنجاز البشري.\"",
-      title: "الثقافة والتاريخ والابتكار",
-      desc: "تقدم الحياة في إيطاليا مزيجاً لا مثيل له من الصرامة الأكاديمية والإثراء الثقافي. سر عبر التاريخ كل يوم في طريقك إلى الفصل، وانغمس في مجتمع يقدر \"الحياة الحلوة\" بقدر التميز المهني.",
+      title: "الثقافة، التاريخ، والمغامرات اليومية",
+      desc: "الحياة في إيطاليا هي أكثر من مجرد محاضرات. إنها تعني ركوب القطار إلى الجبال، وركوب الدراجة عبر الشوارع التاريخية، ومشاهدة غروب الشمس فوق البحر الأبيض المتوسط.",
       list: [
         "أسلوب الحياة والمطبخ المتوسطي",
         "السفر المتصل بقلب أوروبا",
         "قطارات فائقة السرعة تربطك بأوروبا"
       ],
-      img1: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80",
-      img2: "https://images.unsplash.com/photo-1549880181-56a44cf4a9a1?w=500&q=80"
+      stories: [
+        {
+          img: "student-life/life1.jpg",
+          author: "أنس (بولونيا)",
+          quote: "الهروب من قاعات الدراسة لقضاء عطلة نهاية الأسبوع في التلال. القطارات السريعة تربط مدينتنا بالطبيعة مباشرة.",
+          tag: "عطلات الجبال"
+        },
+        {
+          img: "student-life/life2.jpg",
+          author: "سارة (ميلانو)",
+          quote: "غروب الشمس فوق بحيرة كومو. الدراسة في إقليم لومبارديا تعني أنك لن تبعد أكثر من ساعة عن البحيرات الجبلية.",
+          tag: "بحيرة كومو"
+        },
+        {
+          img: "student-life/life3.jpg",
+          author: "يوسف (بافيا)",
+          quote: "ركوب الدراجة إلى محاضرتي الصباحية تحت أشجار الخريف الذهبية في بافيا. وتيرة الحياة هنا جميلة للغاية.",
+          tag: "التنقل اليومي"
+        },
+        {
+          img: "student-life/life4.jpg",
+          author: "ماريا (جنوى)",
+          quote: "رحلات نهاية الأسبوع إلى ساحل ليغوريا. القطارات الإقليمية رخيصة للطلاب، مما يجعل إيطاليا كلها حرمنا الجامعي.",
+          tag: "عطلات الساحل"
+        },
+        {
+          img: "student-life/life5.jpg",
+          author: "لوكا (ليكو)",
+          quote: "أمسيات على ضفاف البحيرة في شمال إيطاليا. المناظر تبدو وكأنها لوحة زيتية حية تلهمنا كل يوم.",
+          tag: "مصدر إلهام"
+        }
+      ]
     },
     journey: {
       title: "ابدأ رحلتك الإيطالية اليوم",
