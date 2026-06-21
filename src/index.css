@@ -1,33 +1,29 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --navy:#061D33;            /* Deep prestige academic navy blue */
-  --terracotta:#A93108;      /* Warm Italian terracotta/rust accent */
-  --terracotta-hover:#8E2704;
-  --lavender:#F0F4F8;        /* Soft blue-grey neutral */
-  --text-dark:#22252A;       /* Slate text color */
-  --text-muted:#6B7280;      /* Grey muted text */
-  --border:#E5E7EB;
-  --transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow:0 4px 20px rgba(0, 0, 0, 0.05);
-  --shadow-hover:0 12px 30px rgba(0, 0, 0, 0.1);
+  --navy:#111111;            /* Deep ink charcoal black */
+  --terracotta:#8F361E;      /* Muted editorial terracotta/rust accent */
+  --terracotta-hover:#732914;
+  --lavender:#FAF8F5;        /* Off-white paper color for cards */
+  --text-dark:#111111;       /* Ink black text */
+  --text-muted:#666666;      /* Muted gray text */
+  --border:#E5E2DA;          /* Warm parchment border line */
+  --transition:all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow:none;             /* Flat design - no shadows */
+  --shadow-hover:none;
 }
 html{scroll-behavior:smooth}
 body{
-  font-family:'Outfit',sans-serif;
-  background-color: #F8FAFC;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(240, 244, 248, 0.7) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(169, 49, 8, 0.03) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(6, 29, 51, 0.02) 0px, transparent 50%);
-  background-attachment: fixed;
+  font-family:'Inter',sans-serif;
+  background-color: #FAF6F0; /* Warm parchment cream body */
   color:var(--text-dark);
-  line-height:1.6;
+  line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
 
 /* TYPOGRAPHY OVERRIDES */
 h1, h2, h3, .logo {
-  font-family:'Playfair Display',serif;
+  font-family:'EB Garamond',serif;
+  letter-spacing: -0.015em;
 }
 
 /* NAV */
@@ -79,14 +75,14 @@ nav{
   align-items:center;
   padding:6rem 4rem;
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    linear-gradient(rgba(250, 246, 240, 0.88), rgba(250, 246, 240, 0.88)),
     url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&q=80');
   background-size:cover;
   background-position:center;
 }
 .hero-text{
   max-width:650px;
-  color:#FFFFFF;
+  color:var(--text-dark);
   position:relative;
   z-index: 3;
 }
@@ -154,7 +150,7 @@ nav{
   background: rgba(0, 0, 0, 0.08);
 }
 .stat .n{
-  font-family:'Playfair Display',serif;font-size:2.8rem;
+  font-family:'EB Garamond',serif;font-size:2.8rem;
   color:var(--terracotta);
   font-weight:700;line-height:1;
 }
@@ -172,7 +168,7 @@ nav{
   text-transform:uppercase;color:var(--terracotta);margin-bottom:1rem;
 }
 .section-title{
-  font-family:'Playfair Display',serif;font-size:2.5rem;
+  font-family:'EB Garamond',serif;font-size:2.5rem;
   color:var(--navy);margin-bottom:3.5rem;line-height:1.2;font-weight:700;
   position: relative;
 }
@@ -192,17 +188,18 @@ nav{
   gap:2.5rem;
 }
 .institution-card{
-  background:#FFFFFF;
+  background:var(--lavender);
   border:1px solid var(--border);
-  border-radius:8px;overflow:hidden;
+  border-radius:6px;overflow:hidden;
   transition:var(--transition);cursor:pointer;
   text-decoration:none;color:inherit;
   display:flex;flex-direction:column;
   box-shadow: var(--shadow);
 }
 .institution-card:hover{
-  box-shadow:var(--shadow-hover);
-  transform:translateY(-4px);
+  background:#FAF3EA;
+  border-color:var(--navy);
+  transform:translateY(-1px);
 }
 .institution-img{
   height:240px;
@@ -217,7 +214,7 @@ nav{
   flex-direction:column;
 }
 .institution-info h3{
-  font-family:'Playfair Display',serif;font-size:1.35rem;
+  font-family:'EB Garamond',serif;font-size:1.35rem;
   font-weight:700;margin-bottom:0.75rem;color:var(--navy);
 }
 .institution-info p{
@@ -370,9 +367,9 @@ nav{
   margin-top: 4rem;
 }
 .expertise-card {
-  background: #FFFFFF;
+  background: var(--lavender);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 3rem;
   box-shadow: var(--shadow);
   display: grid;
@@ -382,8 +379,9 @@ nav{
   transition: var(--transition);
 }
 .expertise-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  background: #FAF3EA;
+  border-color: var(--navy);
+  transform: translateY(-1px);
 }
 .expertise-card:nth-child(even) {
   grid-template-columns: 0.9fr 1.1fr;
@@ -395,7 +393,7 @@ nav{
   color: var(--text-dark);
 }
 .expertise-card-content h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 2rem;
   color: var(--navy);
   margin-bottom: 1.25rem;
@@ -440,7 +438,7 @@ nav{
 /* STUDENT EXPERIENCE (STAGGERED GALLERY) */
 .experience-quote {
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 1.8rem;
   font-style: italic;
   max-width: 800px;
@@ -472,7 +470,7 @@ nav{
   margin-top: 2rem;
 }
 .experience-text h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 2.2rem;
   color: var(--navy);
   margin-bottom: 1.5rem;
@@ -519,7 +517,7 @@ nav{
   margin: 0 auto;
 }
 .journey-section h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 2.5rem;
   color: var(--navy);
   margin-bottom: 1rem;
@@ -690,7 +688,7 @@ footer{
   padding-bottom: 2rem;
 }
 .subpage-header h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 3rem;
   color: var(--navy);
   margin-bottom: 0.5rem;
@@ -717,7 +715,7 @@ footer{
   margin-bottom: 4rem;
 }
 .subpage-section h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 1.8rem;
   color: var(--navy);
   margin-bottom: 1.5rem;
@@ -1016,19 +1014,20 @@ footer{
   right: -20px;
 }
 .timeline-content {
-  background: #FFFFFF;
+  background: var(--lavender);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 2rem;
   box-shadow: var(--shadow);
   transition: var(--transition);
 }
 .timeline-content:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  background: #FAF3EA;
+  border-color: var(--navy);
+  transform: translateY(-1px);
 }
 .timeline-content h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 1.4rem;
   color: var(--navy);
   margin-bottom: 0.5rem;
@@ -1065,7 +1064,7 @@ footer{
   box-shadow: var(--shadow-hover);
 }
 .orientation-support-box h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'EB Garamond', serif;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }

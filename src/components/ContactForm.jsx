@@ -98,7 +98,7 @@ export default function ContactForm({ lang }) {
 
   if (status === 'success') {
     return (
-      <div className="contact-form-success" style={{ padding: '3rem 2rem', textAlign: 'center', background: '#F8FAFC', borderRadius: '12px', border: '1px solid var(--border)', maxWidth: '600px', margin: '2rem auto' }}>
+      <div className="contact-form-success" style={{ padding: '3rem 2rem', textAlign: 'center', background: 'var(--lavender)', borderRadius: '6px', border: '1px solid var(--border)', maxWidth: '600px', margin: '2rem auto' }}>
         <h3 style={{ color: 'var(--navy)', fontSize: '1.6rem', marginBottom: '1rem' }}>{t.successTitle}</h3>
         <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '1.5rem', fontSize: '1.05rem' }}>
           {t.successDesc} <strong style={{ color: 'var(--terracotta)' }}>{formData.email}</strong>.
@@ -118,8 +118,8 @@ export default function ContactForm({ lang }) {
   }
 
   return (
-    <div className="contact-form-wrapper" style={{ maxWidth: '650px', margin: '2rem auto', background: '#FFFFFF', border: '1px solid var(--border)', borderRadius: '12px', padding: '2.5rem', boxShadow: 'var(--shadow)' }}>
-      <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.6rem', color: 'var(--navy)', marginBottom: '0.5rem', textAlign: 'center' }}>
+    <div className="contact-form-wrapper" style={{ maxWidth: '650px', margin: '2rem auto', background: 'var(--lavender)', border: '1px solid var(--border)', borderRadius: '6px', padding: '2.5rem', boxShadow: 'none' }}>
+      <h3 style={{ fontFamily: "'EB Garamond', serif", fontSize: '1.6rem', color: 'var(--navy)', marginBottom: '0.5rem', textAlign: 'center' }}>
         {t.title}
       </h3>
       <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem', textAlign: 'center' }}>
